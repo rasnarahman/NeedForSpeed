@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- SPIRAL NOTE BOOK HEADER -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="horizontal" />
+
+    <!-- HEADER ROW -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:background="@android:color/darker_gray"
+        android:gravity="left"
+        android:orientation="horizontal"
+        android:padding="4dip">
+
+        <TextView
+            android:id="@+id/headerDate"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_weight="0.25"
+            android:gravity="left"
+            android:padding="5dp"
+            android:text="Date"
+            android:textAlignment="center"
+            android:textColorLink="@android:color/black"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/headerOdometer"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_weight="0.25"
+            android:gravity="right"
+            android:padding="5dp"
+            android:text="Odometer"
+            android:textAlignment="center"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            tools:text="Odometer" />
+
+        <TextView
+            android:id="@+id/headerFuels"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_weight="0.25"
+            android:padding="5dp"
+            android:text="Fuel"
+            android:textAlignment="center"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/headerCost"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_weight="0.20"
+            android:gravity="right"
+            android:padding="5dp"
+            android:text="Cost"
+            android:textAlignment="center"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- LIST OF GAS RECORDS -->
+    <ListView
+        android:id="@+id/gas_log_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/holo_red_light"
+        android:dividerHeight="1dip"
+        android:padding="4dip" />
+
+</LinearLayout>

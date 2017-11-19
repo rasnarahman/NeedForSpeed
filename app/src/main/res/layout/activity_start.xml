@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_red_light"
+    android:orientation="vertical"
+    tools:context="com.example.rasna.needforspeed.StartActivity">
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textColorHighlight="@android:color/black"
+        android:textSize="18dp"
+        android:layout_marginLeft="10dp"
+        tools:text="Username" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_margin="10dp"
+        android:background="@android:color/darker_gray"
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="textEmailAddress"
+        android:textColor="@android:color/black"
+        android:textColorHighlight="@android:color/black"
+        android:textSize="18dp"
+        android:theme="@style/AppTheme" />
+
+    <TextView
+        android:id="@+id/tvPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="  Password"
+        android:textColor="@android:color/black"
+        android:textColorHighlight="@android:color/black"
+        android:textSize="18dp" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:layout_margin="10dp"
+        android:background="@android:color/darker_gray"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="@android:color/black"
+        android:textColorHighlight="@android:color/black"
+        android:textSize="18dp" />
+
+
+    <Button
+        android:id="@+id/LoginButton"
+        android:layout_width="127dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:background="@android:color/darker_gray"
+        android:text="Login"
+        android:textSize="18dp" />
+
+
+    <Button
+        android:id="@+id/SignUpbutton"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:background="@android:color/darker_gray"
+        android:text="SignUp"
+        android:textSize="18dp" />
+
+</LinearLayout>
+

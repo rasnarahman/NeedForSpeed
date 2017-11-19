@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_red_light"
+    android:orientation="vertical"
+    tools:context="com.example.rasna.needforspeed.DashboardActivity">
+
+
+
+
+                <Button
+                    android:id="@+id/RefuelButton"
+                    android:layout_width="323dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginStart="27dp"
+                    android:layout_marginTop="25dp"
+                    android:drawableLeft="@drawable/petrol"
+                    android:src="@drawable/petrol"
+                    android:text="Add fuel"
+                    android:textSize="18dp" />
+
+                <Button
+                    android:id="@+id/DatabaseButton"
+                    android:layout_width="323dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginStart="27dp"
+                    android:layout_marginTop="15dp"
+                    android:drawableLeft="@drawable/ic_database"
+                    android:text="Database"
+                    android:textSize="18dp" />
+
+                <!-- PLOT DATA BUTTON -->
+                <Button
+                    android:id="@+id/buttonPlotData"
+                    android:layout_width="323dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginStart="27dp"
+                    android:layout_marginTop="15dp"
+                    android:drawableLeft="@drawable/chart_stat"
+                    android:text="Log"
+                    android:textSize="18dp" />
+
+                <!-- VIEW STATISTICS BUTTON -->
+                <Button
+                    android:id="@+id/buttonViewStatistics"
+                    android:layout_width="323dp"
+                    android:layout_height="80dp"
+                    android:drawableLeft="@drawable/icons_plot"
+                    android:text="Plot"
+                    android:textSize="18dp"
+                    android:layout_marginStart="27dp"
+                    android:layout_marginTop="15dp" />
+
+
+</LinearLayout>
+

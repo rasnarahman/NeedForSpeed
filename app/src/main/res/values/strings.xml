@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">NeedForSpeed</string>
+
+    <string-array name = "fuel_type">
+        <item>Octen</item>
+        <item>Petrol</item>
+        <item>Diesel</item>
+        <item>CNG</item>
+        <item>LPG</item>
+
+    </string-array>
+</resources>
