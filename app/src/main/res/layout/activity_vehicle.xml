@@ -20,52 +20,105 @@
             android:paddingRight="8dip"
             android:paddingTop="8dip">
 
+
             <TextView
-                android:layout_width="fill_parent"
+                android:id="@+id/tvVehicle"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:text="Vehicle Name"
+                android:drawableLeft="@drawable/ic_car"
+                android:drawableRight="@drawable/ic_car"
+                android:layout_marginBottom="15dp"
+                android:text="Vehicle Detail"
+                android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textColorHighlight="@android:color/black"
                 android:textSize="25sp" />
 
+            <TextView
+                android:id="@+id/tvMake"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Make"
+                android:textColor="@android:color/black"
+                android:textColorHighlight="@android:color/black"
+                android:textSize="18sp" />
+
             <EditText
-                android:id="@+id/textVehicleName"
-                android:layout_width="fill_parent"
-                android:layout_height="50dp"
+                android:id="@+id/txtMake"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/darker_gray"
+                android:inputType="textCapSentences"
+                android:maxLength="20" />
+
+
+
+            <TextView
+                android:id="@+id/tvModel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Model"
+                android:textColor="@android:color/black"
+                android:textColorHighlight="@android:color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/txtModel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/darker_gray"
+                android:inputType="textCapSentences"
+                android:maxLength="20" />
+
+
+            <TextView
+                android:id="@+id/tvYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Year"
+                android:textColor="@android:color/black"
+                android:textColorHighlight="@android:color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/txtYear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:background="@android:color/darker_gray"
                 android:inputType="textCapSentences"
                 android:maxLength="20" />
 
             <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="50dp"
-                android:text="VIN"
+                android:id="@+id/tvVin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vin"
                 android:textColor="@android:color/black"
                 android:textColorHighlight="@android:color/black"
-                android:textSize="25sp" />
+                android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/Vin"
-                android:layout_width="fill_parent"
-                android:layout_height="50dp"
+                android:id="@+id/txtVin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:background="@android:color/darker_gray"
                 android:inputType="textCapSentences"
                 android:maxLength="20" />
 
 
             <TextView
-                android:id="@+id/labelVehicleTankSize"
-                android:layout_width="fill_parent"
-                android:layout_height="50dp"
+                android:id="@+id/tvTankSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:text="Tank Size"
                 android:textColor="@android:color/black"
                 android:textColorHighlight="@android:color/black"
-                android:textSize="25sp" />
+                android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/textVehicleTankSize"
-                android:layout_width="fill_parent"
-                android:layout_height="50dp"
+                android:id="@+id/txtTankSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:background="@android:color/darker_gray"
                 android:digits="0123456789.,"
                 android:inputType="numberDecimal" />
@@ -85,39 +138,18 @@
                     android:text="Fuel Type"
                     android:textColor="@android:color/black"
                     android:textColorHighlight="@android:color/black"
-                    android:textSize="25sp" />
+                    android:textSize="20sp" />
 
                 <Spinner
-                    android:id="@+id/spinner1"
+                    android:id="@+id/spinnerFuelType"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:background="@android:color/darker_gray"
                     android:entries="@array/fuel_type"
                     android:padding="7dp"
                     android:textAlignment="center" />
             </LinearLayout>
-
-
-
-
-
-
-            <!--<TextView-->
-                <!--android:id="@+id/labelVehicleNotes"-->
-                <!--android:layout_width="fill_parent"-->
-                <!--android:layout_height="50dp"-->
-                <!--android:text="Note"-->
-                <!--android:textColor="@android:color/black"-->
-                <!--android:textColorHighlight="@android:color/black"-->
-                <!--android:textSize="25sp" />-->
-
-            <!--<EditText-->
-                <!--android:id="@+id/textVehicleNote"-->
-                <!--android:layout_width="fill_parent"-->
-                <!--android:layout_height="79dp"-->
-                <!--android:background="@android:color/darker_gray"-->
-                <!--android:inputType="textLongMessage" />-->
 
 
         </LinearLayout>
@@ -127,7 +159,7 @@
             android:layout_height="wrap_content"
             android:background="@android:color/holo_red_light"
             android:orientation="horizontal"
-            android:padding="5dip">
+            android:padding="15dip">
 
             <Button
                 android:id="@+id/buttonOK"
