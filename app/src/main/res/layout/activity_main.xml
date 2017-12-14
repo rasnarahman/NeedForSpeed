@@ -8,6 +8,11 @@
 
     tools:context="com.example.rasna.needforspeed.MainActivity">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
@@ -34,7 +39,7 @@
         <Spinner
             android:id="@+id/spinnerVehicles"
             android:layout_width="match_parent"
-            android:layout_height="84dp"
+            android:layout_height="55dp"
             android:textSize="25sp" />
 
         <!-- VEHICLE ADD/EDIT/DELETE BUTTONS -->
@@ -70,21 +75,20 @@
 
         </LinearLayout>
 
-
+        <Button
+            android:id="@+id/button"
+            android:layout_width="220dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="19dp"
+            android:backgroundTint="@android:color/darker_gray"
+            android:text="Submit"
+            android:textSize="18dp" />
 
     </LinearLayout>
 
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="220dp"
-        android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="19dp"
-        android:backgroundTint="@android:color/darker_gray"
-        android:text="Submit"
-        android:textSize="18dp" />
-
+    </ScrollView>
 
 </RelativeLayout>
