@@ -16,7 +16,7 @@ import java.util.List;
 
 public class DatabaseHelper extends SQLiteOpenHelper{
     public static final String DATABASE_NAME = "NeedForSpeed.db";
-    public static final Integer DATABASE_VERSION = 4;
+    public static final Integer DATABASE_VERSION = 5;
     public static SQLiteDatabase db;
     public static ContentValues contentValues;
 
@@ -28,11 +28,13 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL( "CREATE TABLE Vehicle ( VIN TEXT NOT NULL, Make TEXT, Model TEXT, Year INTEGER, FuelType TEXT, TankSize INTEGER)" );
+        db.execSQL( "CREATE TABLE FuelInfo ( VIN TEXT NOT NULL, Unit TEXT, Odometer INTEGER, FuelPrice REAL, FuelAmount INTEGER, PurchaseDate TEXT)" );
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL( "DROP TABLE Vehicle" );
+        db.execSQL( "DROP TABLE FuelInfo" );
         onCreate(db);
     }
 
@@ -47,6 +49,19 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         contentValues.put( "FuelType", fuelType );
         contentValues.put( "TankSize", tankSize );
         return insert( "Vehicle", contentValues);
+    }
+
+    public boolean addFuel( String vin, String unit, Integer odometer, float fuelPrice, Integer fuelAmount, String purchaseDate){
+        SQLiteDatabase db = this.getWritableDatabase();
+        contentValues = new ContentValues( );
+
+        contentValues.put( "VIN", vin );
+        contentValues.put( "Unit", unit );
+        contentValues.put( "Odometer", odometer );
+        contentValues.put( "FuelPrice", fuelPrice );
+        contentValues.put( "FuelAmount", fuelAmount );
+        contentValues.put( "PurchaseDate", purchaseDate );
+        return insert( "FuelInfo", contentValues);
     }
 
 

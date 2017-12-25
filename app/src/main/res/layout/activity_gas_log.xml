@@ -6,6 +6,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
+    <Button
+        android:id="@+id/buttonAddFuel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@android:color/darker_gray"
+        android:text="Add Fuel" />
+
+
     <!-- SPIRAL NOTE BOOK HEADER -->
     <LinearLayout
         android:layout_width="fill_parent"
