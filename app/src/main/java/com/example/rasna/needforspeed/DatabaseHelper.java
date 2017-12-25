@@ -5,6 +5,10 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by rasna on 2017-11-19.
@@ -45,10 +49,39 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         return insert( "Vehicle", contentValues);
     }
 
-    public Cursor getVehicleInfo(){
-        SQLiteDatabase db = this.getWritableDatabase();
-        Cursor res = db.rawQuery( "Select * from "+ "Vehicle",null);
-        return res;
+    public Cursor getVehicleInfo() {
+        return db.rawQuery( "Select * from "+ "Vehicle",null);
+    }
+
+    public List<Vehicle> getAllVehicles(){
+        List<Vehicle> vehicleList = new ArrayList<Vehicle>();
+        String[] vechileTableColumns = new String[]{
+            "VIN", "Make", "Model", "Year", "FuelType", "TankSize"
+        };
+
+        //Get vehicle from database
+        Cursor cursor = db.query("Vehicle", vechileTableColumns, null, null, null, null, null);
+        String count =  Integer.toString(cursor.getCount());
+        Log.i("DataBaseHelper", "Total Vehicle in Database= " + count);
+
+        //Create list of 'Vehicle' objects from the retrieved data
+        if (cursor.moveToFirst()){
+            do{
+                String vin = cursor.getString(cursor.getColumnIndex("VIN"));
+                String make = cursor.getString(cursor.getColumnIndex("Make"));
+                String model = cursor.getString(cursor.getColumnIndex("Model"));
+                Integer year = Integer.parseInt(cursor.getString(cursor.getColumnIndex("Year")));
+                String fuelType = cursor.getString(cursor.getColumnIndex("FuelType"));
+                Integer tankSize = Integer.parseInt(cursor.getString(cursor.getColumnIndex("TankSize")));
+                Log.i("DatabaseHelper", "Vehicle Info = " + vin + "- " + make + " - " + model + " - " + year + " - " + fuelType + " - " + tankSize);
+                Vehicle vehicle = new Vehicle(vin, make, model, year, tankSize, fuelType);
+                vehicleList.add(vehicle);
+            }while(cursor.moveToNext());
+        }
+
+        cursor.close();
+
+        return vehicleList;
     }
 
 

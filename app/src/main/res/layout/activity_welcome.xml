@@ -17,7 +17,7 @@
         android:textSize="28dp"
         android:layout_marginLeft="10dp"
         android:textAlignment="center"
-        tools:text="Welcome" />
+        tools:text="Graphical Interface Programming" />
 
 
     <Button

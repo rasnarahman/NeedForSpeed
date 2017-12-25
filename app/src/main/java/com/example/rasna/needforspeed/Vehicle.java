@@ -17,6 +17,24 @@ public class Vehicle extends Activity {
     Spinner spFuelType;
     DatabaseHelper databaseHelper;
 
+    String Vin;
+    String Make;
+    String Model;
+    Integer Year;
+    Integer TankSize;
+    String FuelType;
+
+    public Vehicle() {}
+
+    public Vehicle(String vin, String make, String model, Integer year, Integer tankSize, String fuelType) {
+        Vin = vin;
+        Make = make;
+        Model = model;
+        Year = year;
+        TankSize = tankSize;
+        FuelType = fuelType;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );

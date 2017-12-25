@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -13,6 +14,7 @@ import android.widget.SimpleCursorAdapter;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends Activity {
     DatabaseHelper dbHelper;
@@ -31,10 +33,18 @@ public class MainActivity extends Activity {
 
         dbHelper = new DatabaseHelper( this );
         onClickButtonListener();
-        adapter=new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1,
-                listItems);
-        setListAdapter(adapter);
+
+        List<String> vechileMakeModelYearStringList = new ArrayList<String>();
+        List<Vehicle> vehicleList = dbHelper.getAllVehicles();
+        spinnerDropDown = (Spinner) findViewById(R.id.spinnerVehicles);
+
+        for (Vehicle vehicle: vehicleList) {
+            vechileMakeModelYearStringList.add(vehicle.Make + " - " + vehicle.Model + " - " + vehicle.Year);
+        }
+
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, vechileMakeModelYearStringList);
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerDropDown.setAdapter(dataAdapter);
     }
 
     private void setListAdapter(ArrayAdapter<String> adapter) {
