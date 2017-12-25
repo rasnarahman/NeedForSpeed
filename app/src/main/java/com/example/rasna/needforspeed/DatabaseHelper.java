@@ -64,11 +64,11 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         return insert( "FuelInfo", contentValues);
     }
 
-    public List<FuelDetail> getFuelDetail(String vin) {
+    public ArrayList<FuelDetail> getFuelDetail(String vin) {
         String[] fuelTableColumns = new String[]{
                 "VIN", "Unit", "Odometer", "FuelPrice", "FuelAmount", "PurchaseDate"
         };
-        List<FuelDetail> fuelDetailList = new ArrayList<FuelDetail>();
+        ArrayList<FuelDetail> fuelDetailList = new ArrayList<FuelDetail>();
 
         Cursor cursor = db.query("FuelInfo", fuelTableColumns, "VIN=?", new String[] { vin }, null, null, null, null);
 
