@@ -64,6 +64,33 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         return insert( "FuelInfo", contentValues);
     }
 
+    public List<FuelDetail> getFuelDetail(String vin) {
+        String[] fuelTableColumns = new String[]{
+                "VIN", "Unit", "Odometer", "FuelPrice", "FuelAmount", "PurchaseDate"
+        };
+        List<FuelDetail> fuelDetailList = new ArrayList<FuelDetail>();
+
+        Cursor cursor = db.query("FuelInfo", fuelTableColumns, "VIN=?", new String[] { vin }, null, null, null, null);
+
+        if (cursor.moveToFirst()){
+            do{
+                String unit = cursor.getString(cursor.getColumnIndex("Unit"));
+                Integer odometer = Integer.parseInt(cursor.getString(cursor.getColumnIndex("Odometer")));
+                Float fuelPrice = Float.parseFloat(cursor.getString(cursor.getColumnIndex("FuelPrice")));
+                Integer fuelAmount = Integer.parseInt(cursor.getString(cursor.getColumnIndex("FuelAmount")));
+                String purchaseDate = cursor.getString(cursor.getColumnIndex("PurchaseDate"));
+                Log.i("DatabaseHelper", "Fuel Info = " + vin + "- " + unit + " - " + odometer + " - " + fuelPrice + " - " + fuelAmount + " - " + purchaseDate);
+                FuelDetail fuelDetail = new FuelDetail(vin, unit, odometer, fuelPrice, fuelAmount, purchaseDate);
+                fuelDetailList.add(fuelDetail);
+            }while(cursor.moveToNext());
+        }
+
+        cursor.close();
+
+        return fuelDetailList;
+
+    }
+
 
     public List<Vehicle> getAllVehicles(){
         List<Vehicle> vehicleList = new ArrayList<Vehicle>();

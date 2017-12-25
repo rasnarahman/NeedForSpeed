@@ -1,6 +1,7 @@
 package com.example.rasna.needforspeed;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -56,6 +57,9 @@ public class gas_record extends Activity {
                         boolean addedSuccessfully = databaseHelper.addFuel(vin, unit, odometer, fuelPrice, fuelAmount, purchaseDate );
                         if (addedSuccessfully){
                             Toast.makeText( gas_record.this, "Fuel added successfully" , Toast.LENGTH_LONG).show();
+                            Intent intent = new Intent(gas_record.this, gas_logList.class);
+                            intent.putExtra("CURRENT_VEHICLE_VIN", vin);
+                            startActivity( intent );
                         }
                         else {
                             Toast.makeText( gas_record.this, "Failed to add vehicle" , Toast.LENGTH_LONG).show();
