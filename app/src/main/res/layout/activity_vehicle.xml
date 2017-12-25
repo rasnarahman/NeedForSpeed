@@ -168,21 +168,21 @@
                 android:background="@android:color/darker_gray"
                 android:text="OK" />
 
-            <Button
-                android:id="@+id/buttonView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="15dp"
-                android:background="@android:color/darker_gray"
-                android:text="View" />
-
-            <Button
+           <!-- <Button
                 android:id="@+id/buttonCancel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="15dp"
                 android:background="@android:color/darker_gray"
-                android:text="Cancle" />
+                android:text="Cancle" /> -->
+
+            <Button
+                android:id="@+id/buttonHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@android:color/darker_gray"
+                android:text="Home" />
 
         </LinearLayout>
 

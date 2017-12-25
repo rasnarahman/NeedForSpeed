@@ -2,6 +2,7 @@ package com.example.rasna.needforspeed;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
@@ -10,10 +11,12 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import java.util.List;
+
 public class Vehicle extends Activity {
 
     EditText editVin, editMake, editModel, editYear, editTankSize;
-    Button btnOk,btnView,btnCancel ;
+    Button btnOk,btnCancel ;
     Spinner spFuelType;
     DatabaseHelper databaseHelper;
 
@@ -48,13 +51,32 @@ public class Vehicle extends Activity {
         editYear = (EditText)findViewById( R.id.txtYear );
         editTankSize = (EditText)findViewById( R.id.txtTankSize );
         btnOk = (Button)findViewById( R.id.buttonOK );
-        btnView = (Button)findViewById( R.id.buttonView );
         spFuelType = (Spinner)findViewById( R.id.spinnerFuelType );
         clickOkButton();
-        viewAll();
+        onClickButtonToGoHome();
+    }
+
+    public boolean isVechileNew(){
+        boolean newVehicle = true;
+        String vin = editVin.getText().toString();
+        List<Vehicle> currentVehiclesInDb = databaseHelper.getAllVehicles();
+
+        for(Vehicle vehicle : currentVehiclesInDb) {
+           if(vehicle.Vin == vin) {
+               newVehicle = false;
+           }
+        }
+
+        return newVehicle;
     }
 
     public void clickOkButton(){
+        if(!isVechileNew()) {
+            Toast.makeText( Vehicle.this, "Error: The vehicle is alre1dy in database. Please check the  VIN number", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        //Save data in db
         btnOk.setOnClickListener(
             new View.OnClickListener(){
                 @Override
@@ -72,40 +94,23 @@ public class Vehicle extends Activity {
                     else {
                         Toast.makeText( Vehicle.this, "Failed to add vehicle" , Toast.LENGTH_LONG).show();
                     }
-
                 }
             }
         );
     }
 
-    public void viewAll() {
-        btnView.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Cursor res = databaseHelper.getVehicleInfo();
-                        if (res.getCount() == 0) {
-                            showMessage( "Error", "No data found" );
-                            return;
-                        }
-
-
-                        StringBuffer buffer = new StringBuffer();
-                        while (res.moveToNext()) {
-
-                            buffer.append( "VIN:  " + res.getString( 0 ) + "\n" );
-                            buffer.append( "Make:  " + res.getString( 1 ) + "\n" );
-                            buffer.append( "Model:  " + res.getString( 2 ) + "\n" );
-                            buffer.append( "Year:  " + res.getString( 3 ) + "\n" );
-                            buffer.append( "FuelType:  " + res.getString( 4 ) + "\n" );
-                            buffer.append( "TankSize:  " + res.getString( 5 ) + "\n\n" );
-                        }
-
-                      showMessage( "Data", buffer.toString() );
-                    }
-                }
+    public void onClickButtonToGoHome(){
+        Button homeButton = (Button)findViewById(R.id.buttonHome);
+        homeButton.setOnClickListener(new View.OnClickListener(){
+           @Override
+           public void onClick(View v){
+               Intent intent = new Intent(Vehicle.this, MainActivity.class);
+               startActivity( intent );
+            }
+            }
         );
     }
+
 
     public void showMessage(String Title, String Message){
         AlertDialog.Builder builder = new AlertDialog.Builder( this );
@@ -114,7 +119,4 @@ public class Vehicle extends Activity {
         builder.setMessage( Message );
         builder.show();
     }
-
-
-
 }

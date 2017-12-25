@@ -49,9 +49,6 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         return insert( "Vehicle", contentValues);
     }
 
-    public Cursor getVehicleInfo() {
-        return db.rawQuery( "Select * from "+ "Vehicle",null);
-    }
 
     public List<Vehicle> getAllVehicles(){
         List<Vehicle> vehicleList = new ArrayList<Vehicle>();
