@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -56,14 +57,13 @@ public class Vehicle extends Activity {
         onClickButtonToGoHome();
     }
 
-    public boolean isVechileNew(){
+    public boolean isVechileNew(String newvin){
         boolean newVehicle = true;
-        String vin = editVin.getText().toString();
         List<Vehicle> currentVehiclesInDb = databaseHelper.getAllVehicles();
-
         for(Vehicle vehicle : currentVehiclesInDb) {
-           if(vehicle.Vin == vin) {
+           if(vehicle.Vin.equalsIgnoreCase(newvin)) {
                newVehicle = false;
+               break;
            }
         }
 
@@ -71,17 +71,16 @@ public class Vehicle extends Activity {
     }
 
     public void clickOkButton(){
-        if(!isVechileNew()) {
-            Toast.makeText( Vehicle.this, "Error: The vehicle is alre1dy in database. Please check the  VIN number", Toast.LENGTH_LONG).show();
-            return;
-        }
-
         //Save data in db
         btnOk.setOnClickListener(
             new View.OnClickListener(){
                 @Override
                 public void onClick(View v){
                     String vin = editVin.getText().toString();
+                    if(!isVechileNew(vin)) {
+                        Toast.makeText( Vehicle.this, "Error: The vehicle is already in database. Please check the  VIN number", Toast.LENGTH_LONG).show();
+                        return;
+                    }
                     String make = editMake.getText().toString();
                     String model = editModel.getText().toString();
                     Integer year = Integer.parseInt(editYear.getText().toString());
