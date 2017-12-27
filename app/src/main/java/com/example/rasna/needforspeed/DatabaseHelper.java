@@ -6,7 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
-
+import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,10 +19,12 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     public static final Integer DATABASE_VERSION = 5;
     public static SQLiteDatabase db;
     public static ContentValues contentValues;
+    private Context currentContext;
 
     public DatabaseHelper(Context context){
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
         db = this.getWritableDatabase();
+        currentContext = context;
     }
 
     @Override
@@ -52,6 +54,8 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     }
 
     public boolean addFuel( String vin, String unit, Integer odometer, float fuelPrice, Integer fuelAmount, String purchaseDate){
+        //Toast.makeText(currentContext, "Adding fuel", Toast.LENGTH_LONG).show();
+
         SQLiteDatabase db = this.getWritableDatabase();
         contentValues = new ContentValues( );
 

@@ -16,7 +16,6 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import android.app.Activity;
 import android.graphics.Color;
 import android.graphics.Typeface;

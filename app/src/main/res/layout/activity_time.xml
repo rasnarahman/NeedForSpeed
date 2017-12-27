@@ -28,7 +28,7 @@
             android:layout_height="wrap_content" />
 
             <TimePicker
-                android:id="@+id/timePicker3"
+                android:id="@+id/timePicker"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -39,7 +39,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/OkBtn"
+                android:id="@+id/saveTime"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="35dp"
