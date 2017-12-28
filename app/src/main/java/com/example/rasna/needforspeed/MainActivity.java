@@ -1,17 +1,12 @@
 package com.example.rasna.needforspeed;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ListView;
-import android.widget.SimpleCursorAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -23,6 +18,7 @@ import java.util.regex.Pattern;
 public class MainActivity extends Activity {
     DatabaseHelper dbHelper;
     Spinner spinnerDropDown;
+    Button weatherButton;
     ArrayList<String> listItems=new ArrayList<String>();
 
     ArrayAdapter<String> adapter;
@@ -71,6 +67,8 @@ public class MainActivity extends Activity {
             }
         });
 
+        onClickWeather();
+
     }
 
     private String extractVinFromVehicleInfo(String vehicleInfo) {
@@ -103,6 +101,21 @@ public class MainActivity extends Activity {
         );
     }
 
+    public void onClickWeather(){
 
+        weatherButton = (Button)findViewById(R.id.weatherButton);
+        weatherButton.setOnClickListener(new View.OnClickListener(){
 
+                                             @Override
+                                             public void onClick(View v){
+                                                 Intent intent = new Intent(MainActivity.this, WeatherForecast.class);
+                                                 startActivity(intent);
+
+                                             }
+
+                                         }
+
+        );
+
+    }
 }

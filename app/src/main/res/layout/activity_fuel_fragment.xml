@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rasna.needforspeed.Fuel_fragment">
+
+
+    <TextView
+        android:id="@+id/txtVinLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="Vehicle Identification Number (VIN):"
+        android:textColor="@color/colorPrimaryDark"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/txtVin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtVinLabel"
+        android:layout_below="@+id/txtVinLabel"
+        android:text="VIN"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/txtPurchaseDateLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtVin"
+        android:layout_below="@+id/txtVin"
+        android:text="Purchase Date:"
+        android:textColor="@color/colorPrimaryDark"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        />
+
+    <TextView
+        android:id="@+id/txtPurchaseDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtPurchaseDateLabel"
+        android:layout_below="@+id/txtPurchaseDateLabel"
+        android:text="Date"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        />
+
+    <TextView
+
+        android:id="@+id/txtOdometerLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtPurchaseDate"
+        android:layout_below="@+id/txtPurchaseDate"
+        android:text="Odometer/Mileage:"
+        android:textColor="@color/colorPrimaryDark"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        />
+
+    <TextView
+
+        android:id="@+id/txtOdometer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtOdometerLabel"
+        android:layout_below="@+id/txtOdometerLabel"
+        android:text="Odometer"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        />
+
+    <TextView
+        android:id="@+id/txtFuelPriceLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtOdometer"
+        android:layout_below="@+id/txtOdometer"
+        android:text="Fuel Price:"
+        android:textColor="@color/colorPrimaryDark"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        />
+
+
+    <TextView
+        android:id="@+id/txtFuelPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtFuelPriceLabel"
+        android:layout_below="@+id/txtFuelPriceLabel"
+        android:text="Price"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        />
+
+    <TextView
+        android:id="@+id/txtFuelAmountLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtFuelPrice"
+        android:layout_below="@+id/txtFuelPrice"
+        android:text="Fuel Amount (Ltr):"
+        android:textColor="@color/colorPrimaryDark"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        />
+
+    <TextView
+        android:id="@+id/txtFuelAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtFuelAmountLabel"
+        android:layout_below="@+id/txtFuelAmountLabel"
+        android:text="Amount"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        />
+
+    <Button
+
+        android:id="@+id/deleteFuelRecord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="left|bottom"
+        android:text="Delete this record"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:textStyle="italic"/>
+
+</RelativeLayout>

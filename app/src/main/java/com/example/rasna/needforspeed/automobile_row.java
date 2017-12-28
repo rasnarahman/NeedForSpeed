@@ -9,5 +9,6 @@ public class automobile_row extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.automobile_row);
+
     }
 }

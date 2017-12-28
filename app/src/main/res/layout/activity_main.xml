@@ -87,6 +87,18 @@
             android:text="Submit"
             android:textSize="18dp" />
 
+        <Button
+            android:id="@+id/weatherButton"
+            android:layout_width="220dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="19dp"
+            android:backgroundTint="@android:color/darker_gray"
+            android:text="Weather Forcast"
+            android:textSize="18dp" />
+
+
     </LinearLayout>
 
 
