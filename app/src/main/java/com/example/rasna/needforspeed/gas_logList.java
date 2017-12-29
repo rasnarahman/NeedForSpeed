@@ -22,7 +22,7 @@ import java.util.ArrayList;
 public class gas_logList extends Activity {
 
     protected static final String ACTIVITY_NAME = "gas_logList";
-    Button btnAddFuel;
+    Button btnAddFuel, btnDeleteVehicle;
     DatabaseHelper databaseHelper;
     ArrayList<FuelDetail> fuelDetails;
     protected ListView list_view;
@@ -40,6 +40,9 @@ public class gas_logList extends Activity {
 
         btnAddFuel = (Button)findViewById( R.id.buttonAddFuel );
         onClickAddFuelButton(currentVehicleVin);
+
+        btnDeleteVehicle = (Button)findViewById( R.id.buttonDeleteVehicle );
+        onClickDeleteVehicleButton(currentVehicleVin);
 
         databaseHelper =  new DatabaseHelper( this);
         fuelDetails = databaseHelper.getFuelDetail(currentVehicleVin);
@@ -196,6 +199,40 @@ public class gas_logList extends Activity {
               Intent intent = new Intent(gas_logList.this, gas_record.class);
               intent.putExtra("CURRENT_VEHICLE_VIN", currentVehicleVin);
               startActivity( intent );
+              }
+          }
+        );
+    }
+
+
+    public void onClickDeleteVehicleButton(final String currentVehicleVin){
+        btnDeleteVehicle.setOnClickListener(new View.OnClickListener(){
+                                          @Override
+                                          public void onClick(View v){
+              Log.i("gas_logList", "Delete vehicle");
+
+              Boolean deletedVehicle = false;
+              Boolean deletedFuelRecord = false;
+
+              if(fuelDetails.size() != 0) {
+                  deletedFuelRecord = databaseHelper.removeFuelRecordAll(currentVehicleVin);
+              }
+                else{
+                  deletedFuelRecord = true;
+              }
+
+              if(deletedFuelRecord) {
+                  deletedVehicle = databaseHelper.removeVehicle(currentVehicleVin);
+              }
+
+              if (deletedFuelRecord && deletedVehicle){
+                  Toast.makeText( gas_logList.this, "Vehicle deleted successfully" , Toast.LENGTH_LONG).show();
+                  Intent intent = new Intent(gas_logList.this, MainActivity.class);
+                  startActivity( intent );
+              }
+              else {
+                  Toast.makeText( gas_logList.this, "Vehicle delete  failed" , Toast.LENGTH_LONG).show();
+              }
               }
           }
         );

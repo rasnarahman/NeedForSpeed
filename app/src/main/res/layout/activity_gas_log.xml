@@ -65,7 +65,6 @@
 
          />
 
-
     <Button
         android:id="@+id/buttonAddFuel"
         android:layout_width="wrap_content"
@@ -73,6 +72,16 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:text="Add Fuel" />
+
+
+    <Button
+        android:id="@+id/buttonDeleteVehicle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:text="Delete Vehicle" />
+
 
 
 

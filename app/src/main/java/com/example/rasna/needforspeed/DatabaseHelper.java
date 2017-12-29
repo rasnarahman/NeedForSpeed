@@ -144,5 +144,25 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     }
 
 
+    public Boolean removeVehicle(String vin){
+        Log.i("DatabaseHelper", "Delete vehicle vin: " + vin);
+
+        int deletedRecrod =  db.delete("Vehicle", "VIN=?",new String [] { vin});
+
+        Log.i("Deleted ","Delete result: " + Integer.toString(deletedRecrod));
+
+        return (deletedRecrod == 0) ? false : true;
+    }
+
+
+    public Boolean removeFuelRecordAll(String vin){
+        Log.i("DatabaseHelper", "Delete fuel vin: " + vin);
+
+        int deletedRecrod =  db.delete("FuelInfo", "VIN=?",new String [] { vin});
+
+        Log.i("Deleted ","Delete result: " + Integer.toString(deletedRecrod));
+
+        return (deletedRecrod == 0) ? false : true;
+    }
 
 }
