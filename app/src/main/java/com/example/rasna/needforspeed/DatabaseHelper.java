@@ -132,11 +132,11 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         return result == -1? false: true;
     }
 
-    public Boolean removeFuelRecord(String date,String vin){
+    public Boolean removeFuelRecord(String vin, String date){
         Log.i("DatabaseHelper", "Delete fuel purchase date: " + date);
         Log.i("DatabaseHelper", "Delete fuel vin: " + vin);
 
-        int deletedRecrod =  db.delete("FuelInfo", null, null);
+        int deletedRecrod =  db.delete("FuelInfo", "VIN=? AND PurchaseDate=?",new String [] { vin, date});
 
         Log.i("Deleted ","Delete result: " + Integer.toString(deletedRecrod));
 
