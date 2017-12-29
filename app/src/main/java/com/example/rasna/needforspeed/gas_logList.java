@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -30,6 +31,7 @@ public class gas_logList extends Activity {
     FrameLayout frameLayout;
     gas_logList myActivity;
     FuelDetailAdapter fuelDetailAdapter;
+    EditText editTotalCost;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +39,8 @@ public class gas_logList extends Activity {
         setContentView( R.layout.activity_gas_log );
 
         final String currentVehicleVin = getIntent().getStringExtra("CURRENT_VEHICLE_VIN");
+
+        editTotalCost = (EditText) findViewById( R.id.txtTotalCost );
 
         btnAddFuel = (Button)findViewById( R.id.buttonAddFuel );
         onClickAddFuelButton(currentVehicleVin);
@@ -46,6 +50,8 @@ public class gas_logList extends Activity {
 
         databaseHelper =  new DatabaseHelper( this);
         fuelDetails = databaseHelper.getFuelDetail(currentVehicleVin);
+
+        setTotalCost(fuelDetails);
 
         list_view =(ListView) findViewById(R.id.list_view);
         list_view.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
@@ -108,6 +114,19 @@ public class gas_logList extends Activity {
         });
     }
 
+    public void setTotalCost(ArrayList<FuelDetail> fuelDetails){
+        Float totalCost = 0.0f;
+
+        if(fuelDetails.size() != 0) {
+            for(FuelDetail fuelDetail: fuelDetails) {
+                Float costPerTransaction = fuelDetail.getFuelAmount() * fuelDetail.getFuelPrice();
+                totalCost += costPerTransaction;
+            }
+            editTotalCost.setText("", TextView.BufferType.EDITABLE);
+            editTotalCost.setText(totalCost.toString(), TextView.BufferType.EDITABLE);
+        }
+    }
+
     public void onActivityResult(int requestCode, int responseCode, Intent data){
         if(requestCode == 10  && responseCode == 10) {
             Log.i("gas_logList", "Delete fuel info for mobile");
@@ -122,7 +141,8 @@ public class gas_logList extends Activity {
                 Toast.makeText( gas_logList.this, "fuel info delete  failed" , Toast.LENGTH_LONG).show();
             }
             fuelDetails = databaseHelper.getFuelDetail(vin);
-            fuelDetailAdapter.notifyDataSetChanged();
+            setTotalCost(fuelDetails); //update total cost
+            fuelDetailAdapter.notifyDataSetChanged(); //update list
         }
     }
 
@@ -138,7 +158,8 @@ public class gas_logList extends Activity {
             Toast.makeText( gas_logList.this, "fuel info delete  failed" , Toast.LENGTH_LONG).show();
         }
         fuelDetails = databaseHelper.getFuelDetail(vin);
-        fuelDetailAdapter.notifyDataSetChanged();
+        setTotalCost(fuelDetails); //update total cost
+        fuelDetailAdapter.notifyDataSetChanged(); //update list
     }
 
 

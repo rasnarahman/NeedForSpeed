@@ -12,7 +12,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_alignParentTop="true"
-
         >
 
         <TextView
@@ -24,12 +23,12 @@
             android:gravity="center"
             android:textSize="15dp"
             android:textStyle="bold"
-            android:text="Purchase Date" />
+            android:text="@string/PurchaseDate" />
         <TextView
             android:id="@+id/txtOdometer"
             android:layout_width="100dp"
             android:layout_height="match_parent"
-            android:text="Odometer"
+            android:text="@string/Odometer"
             android:textSize="15dp"
             android:textStyle="bold"
             android:layout_toEndOf="@+id/txtDate"
@@ -38,7 +37,7 @@
             android:id="@+id/txtFuelPrice"
             android:layout_width="95dp"
             android:layout_height="match_parent"
-            android:text="Price/Ltr"
+            android:text="@string/Price_Ltr"
             android:textSize="15dp"
             android:textStyle="bold"
             android:layout_toEndOf="@+id/txtOdometer"
@@ -47,7 +46,7 @@
             android:id="@+id/txtFuelAmount"
             android:layout_width="95dp"
             android:layout_height="match_parent"
-            android:text="Liters"
+            android:text="@string/Liters"
             android:textSize="15dp"
             android:textStyle="bold"
             android:layout_toEndOf="@+id/txtFuelPrice"
@@ -59,30 +58,73 @@
     <ListView
         android:id="@+id/list_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="360dp"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="25dp"
-
          />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/list_view">
+
+        <TextView
+            android:id="@+id/tvTotalCost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+
+            android:padding="7dp"
+            android:text="Total Fuel Cost($)"
+            android:textAlignment="center"
+            android:textColorHint="@android:color/black"
+            android:textColorLink="@android:color/background_dark"
+            android:textSize="20dp" />
+
+        <!--android:background="@android:color/darker_gray"-->
+        <!--android:drawableLeft="@drawable/ic_gas_can"-->
+
+
+        <EditText
+            android:id="@+id/txtTotalCost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:background="@android:color/darker_gray"
+            android:ems="10"
+            android:hint="Total Fuel Cost"
+            android:inputType="number"
+            android:padding="7dp"
+            android:textColor="@android:color/black"
+            android:textColorHighlight="@android:color/black"
+            android:textSize="18dp"
+            android:theme="@style/AppTheme" />
+
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/buttonAddFuel"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:text="Add Fuel" />
+        android:text="@string/Add_Fuel"
+        android:drawableLeft="@drawable/ic_gas_station"/>
 
 
     <Button
         android:id="@+id/buttonDeleteVehicle"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:text="Delete Vehicle" />
-
-
-
+        android:text="@string/Delete_Vehicle" />
 
 </RelativeLayout>

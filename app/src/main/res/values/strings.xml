@@ -1,20 +1,32 @@
 <resources>
+    <string name="GIP"> Graphical Interface Programming</string>
+
+
     <string name="app_name">Automobile</string>
+    <string name="Select_Vehicles"> Select Vehicles </string>
+    <string name="Add_vehicle">Add Vehicle </string>
+    <string name="weather_forecast" translatable="false">  Weather Forecast </string>
+    <string name="cur_temp" translatable="false">Current Temperature </string>
+    <string name="min_temp" translatable="false">Minimum Temperature </string>
+    <string name="max_temp" translatable="false">maximum Temperature </string>
+    <string name="weatherImage" translatable="false">A weather related image</string>
+    <string name="PurchaseDate">Purchase Date</string>
+    <string name="Odometer"> Odometer </string>
+    <string name="Price_Ltr">Price/Ltr </string>
+    <string name="Liters">Liters </string>
+    <string name="Add_Fuel">Add Fuel </string>
+    <string name="Delete_Vehicle">Delete Vehicle </string>
+    <string name="select_date">yyyy-mm-dd hr:min:00</string>
+    <string name="Monthly_Fuel_cost">Monthly Cost</string>
+
+
 
     <string-array name="fuel_type">
-        <item>Octen</item>
-        <item>Petrol</item>
-        <item>Diesel</item>
-        <item>CNG</item>
-        <item>LPG</item>
-
+    <item>Octen</item>
+    <item>Petrol</item>
+    <item>Diesel</item>
+    <item>CNG</item>
+    <item>LPG</item>
     </string-array>
-
-    <string name="weather_forecast">  Weather Forecast </string>
-    <string name="cur_temp">Current Temperature </string>
-    <string name="min_temp">Minimum Temperature </string>
-    <string name="max_temp">maximum Temperature </string>
-    <string name="weatherImage">A weather related image</string>
-
 
 </resources>

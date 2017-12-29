@@ -13,60 +13,59 @@
         android:layout_height="wrap_content">
 
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="30dp"
-        android:orientation="vertical"
-        android:padding="25dp">
-
-        <TextView
-            android:id="@+id/labelSpinner"
+        <LinearLayout
+            android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:background="@android:color/darker_gray"
-            android:drawableLeft="@drawable/ic_car"
-            android:text="Select Vehicles"
-            android:textAlignment="center"
-            android:textColor="@android:color/black"
-            android:textColorHighlight="@android:color/black"
-            android:textSize="24dp" />
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            android:padding="25dp">
 
-        <Spinner
-            android:id="@+id/spinnerVehicles"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginBottom="25dp"
-            android:textSize="25sp"
-            android:background="@android:color/white"/>
+            <TextView
+                android:id="@+id/labelSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@android:color/darker_gray"
+                android:drawableLeft="@drawable/ic_car"
+                android:text="@string/Select_Vehicles"
+                android:textColor="@android:color/black"
+                android:textColorHighlight="@android:color/black"
+                android:textSize="20dp" />
 
-        <Button
-            android:id="@+id/buttonVehicleAdd"
-            android:layout_width="match_parent"
-            android:layout_height="66dp"
-            android:backgroundTint="@android:color/darker_gray"
-            android:layout_marginBottom="25dp"
-            android:drawableLeft="@drawable/ic_ncar"
-            android:text="Add Vehicle"
-            android:tooltipText="Add Vehicles" />
+            <Spinner
+                android:id="@+id/spinnerVehicles"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="25dp"
+                android:textSize="25dp"
+                android:background="@android:color/white" />
 
-        <Button
-            android:id="@+id/weatherButton"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="25dp"
-            android:backgroundTint="@android:color/darker_gray"
-            android:text="Weather Forcast"
-            android:textSize="18dp" />
+            <Button
+                android:id="@+id/buttonVehicleAdd"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="25dp"
+                android:backgroundTint="@android:color/darker_gray"
+                android:drawableLeft="@drawable/ic_ncar"
+                android:text="@string/Add_vehicle"
+                android:textSize="18dp"/>
+
+            <Button
+                android:id="@+id/weatherButton"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="25dp"
+                android:backgroundTint="@android:color/darker_gray"
+                android:text="Weather Forcast"
+                android:textSize="18dp" />
 
 
-    </LinearLayout>
+        </LinearLayout>
 
 
     </ScrollView>
