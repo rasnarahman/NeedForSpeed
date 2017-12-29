@@ -1,6 +1,7 @@
 package com.example.rasna.needforspeed;
 
 import android.app.Activity;
+import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,17 +20,22 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 public class gas_logList extends Activity {
+
+    protected static final String ACTIVITY_NAME = "gas_logList";
     Button btnAddFuel;
     DatabaseHelper databaseHelper;
     ArrayList<FuelDetail> fuelDetails;
     protected ListView list_view;
     boolean isTab;
     FrameLayout frameLayout;
+    gas_logList myActivity;
+    FuelDetailAdapter fuelDetailAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_gas_log );
+
         final String currentVehicleVin = getIntent().getStringExtra("CURRENT_VEHICLE_VIN");
 
         btnAddFuel = (Button)findViewById( R.id.buttonAddFuel );
@@ -40,16 +46,20 @@ public class gas_logList extends Activity {
 
         list_view =(ListView) findViewById(R.id.list_view);
         list_view.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
-        final FuelDetailAdapter fuelDetailAdapter = new FuelDetailAdapter(this);
+
+        fuelDetailAdapter = new FuelDetailAdapter(this);
         list_view.setAdapter(fuelDetailAdapter);
 
         frameLayout = (FrameLayout)findViewById(R.id.entryType);
         if(frameLayout == null){ //phone
+            Log.i(ACTIVITY_NAME, "frame is not loaded");
             isTab = false;
         }
         else{ //tablet
+            Log.i(ACTIVITY_NAME, "frame is loaded");
             isTab = true;
         }
+        myActivity = this;
 
         list_view.setOnItemClickListener(new AdapterView.OnItemClickListener()
         {
@@ -64,19 +74,21 @@ public class gas_logList extends Activity {
 
                 if(isTab){
                     // if the app is running on a tablet
-                    /*MessageFragment fragment = new MessageFragment();
-                    //   fragment.setChatWindow(ownActivity);
-                    fragment.setChatWindow(myActivity);
+                    Fuel_fragment fragment = new Fuel_fragment();
+                    fragment.setFuelfragment(myActivity);
                     Bundle bundle = new Bundle();
-                    bundle.putString("chatMsg", s);
-                    bundle.putInt("Id",position);
-                    //bundle.putLong("dbId",id);
+
+                    bundle.putString("CURRENT_VEHICLE_VIN",currentVehicleVin);
+                    bundle.putString("PURCHSAE_DATE", purchaseDateFinal);
+                    bundle.putString("ODOMETER",odometerFinal.toString());
+                    bundle.putString("FUEL_PRICE",fuelPriceFinal.toString());
+                    bundle.putString("FUEL_AMOUNT",fuelAmountFinal.toString());
                     fragment.setArguments(bundle);
 
                     FragmentTransaction ft = getFragmentManager().beginTransaction();
                     ft.replace(R.id.entryType, fragment);
                     ft.addToBackStack(null);
-                    ft.commit();*/
+                    ft.commit();
                 }
                 /* sending the activity to the newly created MessageDetails class */
                 else{
@@ -93,20 +105,46 @@ public class gas_logList extends Activity {
         });
     }
 
+    public void onActivityResult(int requestCode, int responseCode, Intent data){
+        if(requestCode == 10  && responseCode == 10) {
+            Log.i("gas_logList", "Delete fuel info for mobile");
+            Bundle bundle = data.getExtras();
+            String vin = bundle.getString("CURRENT_VEHICLE_VIN");
+            String purchaseDate = bundle.getString("PURCHSAE_DATE");
+            Boolean deleted = databaseHelper.removeFuelRecord(vin, purchaseDate);
+            if (deleted){
+                Toast.makeText( gas_logList.this, "fuel info deleted successfully" , Toast.LENGTH_LONG).show();
+            }
+            else {
+                Toast.makeText( gas_logList.this, "fuel info delete  failed" , Toast.LENGTH_LONG).show();
+            }
+            fuelDetails = databaseHelper.getFuelDetail(vin);
+            fuelDetailAdapter.notifyDataSetChanged();
+        }
+    }
+
 
     public void deleteFuelInfoRecord(String vin, String purchaseDate) {
-        Toast.makeText( gas_logList.this, "we are here" , Toast.LENGTH_LONG).show();
-        DatabaseHelper databaseHelper =  new DatabaseHelper( this);
+        //DatabaseHelper databaseHelper =  new DatabaseHelper( this);
+        Log.i("gas_logList", "Delete fuel info for tablet");
         Boolean deleted = databaseHelper.removeFuelRecord(vin, purchaseDate);
         if (deleted){
             Toast.makeText( gas_logList.this, "fuel info deleted successfully" , Toast.LENGTH_LONG).show();
         }
         else {
-            Toast.makeText( gas_logList.this, "fuel info deleted  failed" , Toast.LENGTH_LONG).show();
+            Toast.makeText( gas_logList.this, "fuel info delete  failed" , Toast.LENGTH_LONG).show();
         }
+        fuelDetails = databaseHelper.getFuelDetail(vin);
+        fuelDetailAdapter.notifyDataSetChanged();
     }
 
 
+    protected void onDestroy(){
+        super.onDestroy();
+        if(databaseHelper != null ){
+            databaseHelper.close();
+        }
+    }
 
     private class FuelDetailAdapter extends ArrayAdapter<FuelDetail> {
 

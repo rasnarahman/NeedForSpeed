@@ -3,15 +3,16 @@ package com.example.rasna.needforspeed;
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
+
 
 public class Fuel_fragment extends Fragment  {
-
+    protected static final String ACTIVITY_NAME = "Fuel_fragment";
     TextView txtVin, txtOdometer, txtPurchaseDate, txtPrice, txtAmount;
     Button deleteBtn;
     String myMsg;
@@ -21,7 +22,7 @@ public class Fuel_fragment extends Fragment  {
     String vin, odometer, fuelPrice, fuelAmount, purchaseDate;
 
     public Fuel_fragment() {
-        //default constructor
+
     }
 
     public static Fuel_fragment newInstance()
@@ -30,7 +31,7 @@ public class Fuel_fragment extends Fragment  {
         return myFragment;
     }
 
-    public void setChatWindow(  gas_logList gasLogList){
+    public void setFuelfragment(  gas_logList gasLogList){
         this.gasLogList = gasLogList;
     }
 
@@ -74,21 +75,20 @@ public class Fuel_fragment extends Fragment  {
 
         deleteBtn = (Button) view.findViewById(R.id.deleteFuelRecord);
 
+
         deleteBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(vin != null){
-                    //tablet
-                    Toast.makeText( getActivity(), vin , Toast.LENGTH_LONG).show();
-                    Toast.makeText( getActivity(), purchaseDate , Toast.LENGTH_LONG).show();
+                if(gasLogList != null){
+                    Log.i("Fuel_Fragment", "Delete fuel info in tablet");
                     gasLogList.deleteFuelInfoRecord(vin, purchaseDate);
                     getActivity().getFragmentManager().popBackStack();
                 }
                 else{
-                    Toast.makeText( getActivity(), "in else block" , Toast.LENGTH_LONG).show();
-                    Toast.makeText( getActivity(), purchaseDate , Toast.LENGTH_LONG).show();
+                    Log.i("Fuel_Fragment", "Delete fuel info in mobile");
                     Intent intent = new Intent();
-                    intent.putExtra("deleteMsgId", myId);
+                    intent.putExtra("CURRENT_VEHICLE_VIN", vin);
+                    intent.putExtra("PURCHSAE_DATE", purchaseDate);
                     getActivity().setResult(10, intent);
                     getActivity().finish();
                 }

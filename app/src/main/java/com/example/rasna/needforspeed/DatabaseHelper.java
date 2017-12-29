@@ -6,7 +6,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -134,23 +133,15 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     }
 
     public Boolean removeFuelRecord(String date,String vin){
-        Toast.makeText( currentContext, date , Toast.LENGTH_LONG).show();
-        Toast.makeText( currentContext, vin , Toast.LENGTH_LONG).show();
-        int deletedRecrod =  db.delete("FuelInfo", "PurchaseDate" + "=" + date+  " and VIN=" + vin, null);
-        Toast.makeText( currentContext, deletedRecrod , Toast.LENGTH_LONG).show();
+        Log.i("DatabaseHelper", "Delete fuel purchase date: " + date);
+        Log.i("DatabaseHelper", "Delete fuel vin: " + vin);
 
-        Log.i("Deleted ",Integer.toString(deletedRecrod));
+        int deletedRecrod =  db.delete("FuelInfo", null, null);
 
-        if (deletedRecrod == 0) {
-            return false;
-        }
-        else {
-            return true;
-        }
+        Log.i("Deleted ","Delete result: " + Integer.toString(deletedRecrod));
+
+        return (deletedRecrod == 0) ? false : true;
     }
-
-
-
 
 
 
