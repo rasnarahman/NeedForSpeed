@@ -1,0 +1,26 @@
+<resources>
+    <string name="htAppName">HouseThermostat</string>
+    <string name="htHome">Home</string>
+    <string name="htEn">En</string>
+    <string name="htFr">Fr</string>
+    <string name="htBtnBedroomTxt">Chambre</string>
+    <string name="htBtnHallwayTxt">Couloir</string>
+    <string name="htBtnKitchenTxt">Cuisine</string>
+    <string name="htBtnBasementTxt">Sous-sol</string>
+    <string name="htHintDay">Journée</string>
+    <string name="htHintHour">Heure</string>
+    <string name="htHintMinute">Minute</string>
+    <string name="htHintTemp">Température</string>
+    <string name="htBtnAddTxt">Ajouter</string>
+    <string name="htBtnEditTxt">modifier</string>
+    <string name="htBtnDeleteTxt">Effacer</string>
+    <string name="htBtnCloseTxt">Fermer</string>
+    <string name="htAbout">Sur...</string>
+    <string name="htAboutInfo">
+        Auteur: Nandita Ghosh\nVersion: 1.0.0\n\nInstruction.\n\nDans la vue de la
+        maison appuyez sur l\'un des quatre emplacements pour afficher les paramètres
+        de température de l\'emplacement correspondant. Appuyez sur n\'importe qui
+        des paramètres pour afficher ou modifier le paramètre.
+    </string>
+
+</resources>

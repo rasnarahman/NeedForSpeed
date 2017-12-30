@@ -7,6 +7,29 @@
         <item>Diesel</item>
         <item>CNG</item>
         <item>LPG</item>
-
     </string-array>
+
+    <string name="htAppName">HouseThermostat</string>
+    <string name="htHome">Home</string>
+    <string name="htEn">En</string>
+    <string name="htFr">Fr</string>
+    <string name="htBtnBedroomTxt">Bedroom</string>
+    <string name="htBtnHallwayTxt">Hallway</string>
+    <string name="htBtnKitchenTxt">Kitchen</string>
+    <string name="htBtnBasementTxt">Basement</string>
+    <string name="htHintDay">Day</string>
+    <string name="htHintHour">Hour</string>
+    <string name="htHintMinute">Minute</string>
+    <string name="htHintTemp">Temperature</string>
+    <string name="htBtnAddTxt">Add</string>
+    <string name="htBtnEditTxt">Edit</string>
+    <string name="htBtnDeleteTxt">Delete</string>
+    <string name="htBtnCloseTxt">Close</string>
+    <string name="htAbout">About...</string>
+    <string name="htAboutInfo">
+        Author: Nandita Ghosh\nVersion: 1.0.0\n\nInstruction.\n\nFrom home view tap any one of the
+        four locations to view temperature settings of corresponding location. Tap on any one
+        of the settings to view or edit the setting.
+    </string>
+
 </resources>
