@@ -1,6 +1,6 @@
 <resources>
     <string name="GIP"> Graphical Interface Programming</string>
-
+    <string name="Automobile">Automobile</string>
 
     <string name="app_name">Automobile</string>
     <string name="Select_Vehicles"> Select Vehicles </string>
@@ -14,10 +14,26 @@
     <string name="Odometer"> Odometer </string>
     <string name="Price_Ltr">Price/Ltr </string>
     <string name="Liters">Liters </string>
+    <string name="Total_Fuel_Cost">Total Fuel Cost($)</string>
+
     <string name="Add_Fuel">Add Fuel </string>
     <string name="Delete_Vehicle">Delete Vehicle </string>
     <string name="select_date">yyyy-mm-dd hr:min:00</string>
     <string name="Monthly_Fuel_cost">Monthly Cost</string>
+
+    <string name="Make">Make</string>
+    <string name="Vehicle_Detail">Vehicle Detail</string>
+    <string name="Model">Model</string>
+    <string name="Year">Year</string>
+    <string name="Vin">Vin</string>
+    <string name="Tank_Size">Tank_Size</string>
+    <string name="Fuel_Type">Fuel_Type</string>
+    <string name="OK">OK</string>
+    <string name="Home">Home</string>
+
+    <string name="ok_date">OK</string>
+    <string name="Cancle_date">Cancle</string>
+
 
 
 

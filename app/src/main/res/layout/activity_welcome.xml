@@ -57,7 +57,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="12dp"
         android:background="@android:color/darker_gray"
-        android:text="Automobile"
+        android:text="@string/Automobile"
         android:textSize="18dp" />
 
 </LinearLayout>

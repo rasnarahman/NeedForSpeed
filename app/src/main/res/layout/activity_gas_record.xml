@@ -139,7 +139,6 @@
                 android:layout_marginBottom="15dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="15dp"
-
                 android:layout_marginTop="15dp"
                 android:padding="7dp"
                 android:text="Price/Ltr"
@@ -183,7 +182,6 @@
                 android:layout_marginBottom="15dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="15dp"
-
                 android:padding="7dp"
                 android:text="Total Fuel"
                 android:textAlignment="center"

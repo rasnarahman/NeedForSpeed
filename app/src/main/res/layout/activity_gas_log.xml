@@ -77,9 +77,8 @@
             android:layout_marginBottom="15dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="15dp"
-
             android:padding="7dp"
-            android:text="Total Fuel Cost($)"
+            android:text="@string/Total_Fuel_Cost"
             android:textAlignment="center"
             android:textColorHint="@android:color/black"
             android:textColorLink="@android:color/background_dark"

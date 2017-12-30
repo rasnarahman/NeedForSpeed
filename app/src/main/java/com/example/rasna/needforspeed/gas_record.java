@@ -2,20 +2,14 @@ package com.example.rasna.needforspeed;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.util.Date;
 
 public class gas_record extends Activity {
 
@@ -66,20 +60,29 @@ public class gas_record extends Activity {
                         selctedRadioButtonUnitOption = (RadioButton) findViewById(selectedId);
                         String unit = selctedRadioButtonUnitOption.getText().toString();
 
-                        odometer = Integer.parseInt(editOdometer.getText().toString());
-                        fuelPrice = Float.parseFloat(editFuelPrice.getText().toString());
-                        fuelAmount = Integer.parseInt(editFuelAmount.getText().toString());
-                        purchaseDate = editPurchaseDate.getText().toString();
-
-                        boolean addedSuccessfully = databaseHelper.addFuel(vin, unit, odometer, fuelPrice, fuelAmount, purchaseDate );
-                        if (addedSuccessfully){
-                            Toast.makeText( gas_record.this, "Fuel added successfully" , Toast.LENGTH_LONG).show();
-                            Intent intent = new Intent(gas_record.this, gas_logList.class);
-                            intent.putExtra("CURRENT_VEHICLE_VIN", vin);
-                            startActivity( intent );
+                        if (editOdometer.getText().toString().matches("")
+                                | editFuelPrice.getText().toString().matches("")
+                                | editFuelAmount.getText().toString().matches("")
+                                | editPurchaseDate.getText().toString().matches("")) {
+                            Toast.makeText( gas_record.this, "Cannot save fuel info. Please fill the empty fields!" , Toast.LENGTH_LONG).show();
                         }
                         else {
-                            Toast.makeText( gas_record.this, "Failed to add fuel detail" , Toast.LENGTH_LONG).show();
+                                odometer = Integer.parseInt(editOdometer.getText().toString());
+                                fuelPrice = Float.parseFloat(editFuelPrice.getText().toString());
+                                fuelAmount = Integer.parseInt(editFuelAmount.getText().toString());
+                                purchaseDate = editPurchaseDate.getText().toString();
+
+                                boolean addedSuccessfully = databaseHelper.addFuel(vin, unit, odometer, fuelPrice, fuelAmount, purchaseDate );
+                                if (addedSuccessfully){
+                                    Toast.makeText( gas_record.this, "Fuel added successfully" , Toast.LENGTH_LONG).show();
+                                    Intent intent = new Intent(gas_record.this, gas_logList.class);
+                                    intent.putExtra("CURRENT_VEHICLE_VIN", vin);
+                                    startActivity( intent );
+                                }
+                                else {
+                                    Toast.makeText( gas_record.this, "Failed to add fuel detail" , Toast.LENGTH_LONG).show();
+                                }
+
                         }
                     }
                 }
