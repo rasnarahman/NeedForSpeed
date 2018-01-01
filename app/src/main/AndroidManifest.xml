@@ -28,9 +28,6 @@
         <activity android:name=".WeatherForecast" />
         <activity android:name=".Fuel_details" />
         <activity android:name=".Fuel_fragment" />
-        <activity
-            android:name=".TestToolbar"
-            android:label="@string/title_activity_test_toolbar" />
         <activity android:name=".to_signin" />
     </application>
 

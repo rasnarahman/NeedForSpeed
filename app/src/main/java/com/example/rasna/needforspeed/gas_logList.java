@@ -125,6 +125,10 @@ public class gas_logList extends Activity {
             editTotalCost.setText("", TextView.BufferType.EDITABLE);
             editTotalCost.setText(totalCost.toString(), TextView.BufferType.EDITABLE);
         }
+        else {
+            editTotalCost.setText("", TextView.BufferType.EDITABLE);
+            editTotalCost.setText("0", TextView.BufferType.EDITABLE);
+        }
     }
 
     public void onActivityResult(int requestCode, int responseCode, Intent data){
