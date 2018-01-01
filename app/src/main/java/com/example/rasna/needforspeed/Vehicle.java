@@ -1,11 +1,13 @@
 package com.example.rasna.needforspeed;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,12 +16,13 @@ import android.widget.Toast;
 
 import java.util.List;
 
-public class Vehicle extends Activity {
+public class Vehicle extends AppCompatActivity {
 
     EditText editVin, editMake, editModel, editYear, editTankSize;
     Button btnOk,btnCancel ;
     Spinner spFuelType;
     DatabaseHelper databaseHelper;
+    Toolbar mToolBar;
 
     String Vin;
     String Make;
@@ -53,8 +56,37 @@ public class Vehicle extends Activity {
         editTankSize = (EditText)findViewById( R.id.txtTankSize );
         btnOk = (Button)findViewById( R.id.buttonOK );
         spFuelType = (Spinner)findViewById( R.id.spinnerFuelType );
+
+        mToolBar = (Toolbar) findViewById(R.id.toolbar2);
+        setSupportActionBar(mToolBar);
+
         clickOkButton();
         onClickButtonToGoHome();
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.toolbar_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch (id) {
+            case R.id.action_about:
+                Toast.makeText(this.getApplicationContext(), "Version 1.0, by Rasna Rahman.",
+                        Toast.LENGTH_LONG).show();
+                break;
+            case R.id.action_home:
+                Intent intent = new Intent(Vehicle.this, MainActivity.class);
+                startActivity( intent );
+                break;
+        }
+
+        return  true;
     }
 
     public boolean isVechileNew(String newvin){

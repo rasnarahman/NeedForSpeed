@@ -1,8 +1,12 @@
 package com.example.rasna.needforspeed;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -15,11 +19,13 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
     DatabaseHelper dbHelper;
     Spinner spinnerDropDown;
     Button weatherButton;
+    Button toolBarButton;
     ArrayList<String> listItems=new ArrayList<String>();
+    Toolbar mToolBar;
 
     ArrayAdapter<String> adapter;
 
@@ -67,9 +73,38 @@ public class MainActivity extends Activity {
             }
         });
 
+
+        mToolBar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(mToolBar);
+
+
         onClickWeather();
 
     }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.toolbar_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch (id) {
+            case R.id.action_about:
+                Toast.makeText(this.getApplicationContext(), "Version 1.0, by Rasna Rahman.",
+                        Toast.LENGTH_LONG).show();
+                break;
+            case R.id.action_home:
+                break;
+        }
+
+        return  true;
+    }
+
 
     private String extractVinFromVehicleInfo(String vehicleInfo) {
         Pattern pattern = Pattern.compile(".*([(].*[)])");
@@ -118,4 +153,5 @@ public class MainActivity extends Activity {
         );
 
     }
+
 }
