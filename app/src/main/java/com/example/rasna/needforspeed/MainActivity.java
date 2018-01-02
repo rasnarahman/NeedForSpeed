@@ -1,9 +1,14 @@
 package com.example.rasna.needforspeed;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.ContextThemeWrapper;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -30,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     ArrayAdapter<String> adapter;
 
     private static Button btnVehicleAdd;
+    String sendBackMsgToOne = "Welcome to my first android app";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,7 +105,51 @@ public class MainActivity extends AppCompatActivity {
                         Toast.LENGTH_LONG).show();
                 break;
             case R.id.action_home:
+                Log.i("Toolbar", "Welcome to my first android app");
+                Snackbar.make(findViewById(R.id.toolbar),sendBackMsgToOne, Snackbar.LENGTH_LONG).show();
                 break;
+
+            case R.id.action_two:
+                Log.i("Toolbar", "Option 2 selected");
+
+                // AlertDialog.Builder builder = new AlertDialog.Builder(this.getApplication());
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(this, R.style.AppTheme));
+
+                builder.setTitle(R.string.pick_color);
+
+                // Add the buttons
+
+                builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int id) {
+
+                        // User clicked OK button
+
+                        finish();
+
+                    }
+
+                });
+
+                builder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int id) {
+
+                        // User cancelled the dialog
+
+                    }
+
+                });
+
+                // Create the AlertDialog
+
+                AlertDialog dialog = builder.create();
+
+                dialog.show();
+
+                break;
+
         }
 
         return  true;
