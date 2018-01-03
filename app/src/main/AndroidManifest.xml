@@ -12,18 +12,20 @@
         <activity android:name=".StartActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".MainActivity" />
-
         <activity android:name=".DashboardActivity" />
         <activity android:name=".TimeActivity" />
-        <activity android:name=".Vehicle" >
+        <activity android:name=".Vehicle">
+
+        </activity>
+        <activity android:name=".gas_record" />
+        <activity android:name=".gas_logList" />
+        <activity android:name=".ActivityTracking">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".gas_record" />
-        <activity android:name=".gas_logList"></activity>
     </application>
 
 </manifest>

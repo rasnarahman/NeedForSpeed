@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">NeedForSpeed</string>
 
-    <string-array name = "fuel_type">
+    <string-array name="fuel_type">
         <item>Octen</item>
         <item>Petrol</item>
         <item>Diesel</item>
@@ -9,4 +9,26 @@
         <item>LPG</item>
 
     </string-array>
+
+    <string name="htBtnCloseTxt">Close Tab</string>
+    <string name="htHome">Home</string>
+    <string name="htEn">En</string>
+    <string name="htFr">Fr</string>
+    <string name="welcomeM">Welcome to Activity Tracking!</string>
+    <string name="Swimming">Swimming</string>
+    <string name="Running">Running</string>
+    <string name="Biking">Biking</string>
+    <string name="Walking">Walking</string>
+    <string name="Skating">Skating</string>
+    <string name="htHintDay">Day</string>
+    <string name="hintHour">Hours</string>
+    <string name="minute">Minutes</string>
+    <string name="Comment">Comments</string>
+    <string name="Add">Add</string>
+    <string name="Edit">Edit</string>
+    <string name="Delete">Delete</string>
+    <string name="htAboutInfo">
+        Author: Nisini Dias\nVersion: 1.0.0\n\nInstruction.\n\nWhen in the main page, choose an activity you have done during the day. Tap on the any one to add a new one, edit the current or delete the current.
+        Click on the second smily face to go back to choose another activity.
+    </string>
 </resources>

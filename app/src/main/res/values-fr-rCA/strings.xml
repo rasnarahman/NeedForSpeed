@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="htBtnCloseTxt">fermer longlet</string>
+    <string name="htHome">Maison</string>
+    <string name="htEn">En</string>
+    <string name="htFr">Fr</string>
+    <string name="welcomeM">Bienvenue sur le suivi des activités!</string>
+    <string name="Swimming">La natation</string>
+    <string name="Running">Fonctionnement</string>
+    <string name="Biking">Biking</string>
+    <string name="Walking">Cyclisme</string>
+    <string name="Skating">Patinage</string>
+    <string name="htHintDay">Journée</string>
+    <string name="hintHour">Heures</string>
+    <string name="minute">Minutes</string>
+    <string name="Comment">Commentaires</string>
+    <string name="Add">Ajouter</string>
+    <string name="Edit">Modifier</string>
+    <string name="Delete">Effacer</string>
+    <string name="htAboutInfo">
+        Author: Nisini Dias\nVersion: 1.0.0\n\nInstruction.\n\nLorsque dans la page principale, choisissez une activité que vous avez effectuée pendant la journée. Appuyez sur lun pour en ajouter un nouveau, modifier le courant ou supprimer le courant. Cliquez sur le deuxième visage souriant pour revenir choisir une autre activité.
+    </string>
+</resources>
