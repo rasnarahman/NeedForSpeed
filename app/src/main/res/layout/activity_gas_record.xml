@@ -8,57 +8,80 @@
     android:orientation="vertical"
     tools:context="com.example.rasna.needforspeed.DashboardActivity">
 
-    <ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/DateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="77dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="20dp"
+        android:drawableLeft="@drawable/ic_clock"
+        android:textSize="18dp" />
+
+    <EditText
+        android:id="@+id/Dated"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:background="?android:attr/detailsElementBackground"
+        android:backgroundTint="@android:color/darker_gray"
+        android:padding="7dp"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:hint="@string/select_date"
+        android:inputType="textEmailAddress"/>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="75dp"
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/tvUnit"
-            android:layout_width="match_parent"
+            android:layout_width="100dp"
             android:layout_height="40dp"
-            android:layout_marginTop="10dp"
-            android:background="@android:color/darker_gray"
-            android:text="Unit Option"
+            android:layout_marginTop="20dp"
+            android:text="Unit"
             android:textAlignment="center"
-            android:textAppearance="@android:style/TextAppearance"
-            android:textSize="18dp" />
+            android:textColorHint="@android:color/black"
+            android:textColorLink="@android:color/background_dark"
+            android:textSize="20dp" />
 
         <RadioGroup
+            android:id="@+id/radioGroupUnit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:orientation="horizontal"
             android:paddingLeft="20dp">
 
             <RadioButton
                 android:id="@+id/rbKilometer"
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
-                android:layout_marginRight="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:checked="true"
-                android:paddingRight="20dp"
                 android:text="Kilometers"
                 android:textSize="18sp" />
 
             <RadioButton
                 android:id="@+id/rbMiles"
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:paddingRight="15dp"
                 android:text="Miles"
                 android:textSize="18sp" />
         </RadioGroup>
-
-
-
+    </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -86,7 +109,7 @@
 
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/txtOdometer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
@@ -116,7 +139,6 @@
                 android:layout_marginBottom="15dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="15dp"
-
                 android:layout_marginTop="15dp"
                 android:padding="7dp"
                 android:text="Price/Ltr"
@@ -139,7 +161,7 @@
                 android:background="@android:color/darker_gray"
                 android:ems="10"
                 android:hint="Price per Liter $CAD"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:padding="7dp"
                 android:textColor="@android:color/black"
                 android:textColorHighlight="@android:color/black"
@@ -160,7 +182,6 @@
                 android:layout_marginBottom="15dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="15dp"
-
                 android:padding="7dp"
                 android:text="Total Fuel"
                 android:textAlignment="center"
@@ -192,31 +213,21 @@
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/DateButton"
-            android:layout_width="wrap_content"
-            android:layout_height="77dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="14dp"
-            android:layout_marginLeft="55dp"
-            android:backgroundTint="@android:color/darker_gray"
-            android:drawableLeft="@drawable/ic_clock"
-            android:text="Date and Time"
-            android:textSize="18dp" />
 
         <Button
             android:id="@+id/SaveButton"
             android:layout_width="138dp"
             android:layout_height="wrap_content"
             android:backgroundTint="@android:color/darker_gray"
+            android:layout_marginLeft="15dp"
             android:text="SAVE"
             android:textSize="18dp" />
 
+         <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:orientation="vertical">
+
     </LinearLayout>
-
-
-</ScrollView>
 
 </LinearLayout>

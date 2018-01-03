@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="75dp">
+
+    <TextView
+        android:id="@+id/txtDate"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="Purchase Date" />
+    <TextView
+        android:id="@+id/txtOdometer"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:text="Odometer"
+        android:layout_toEndOf="@+id/txtDate"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/txtFuelPrice"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:text="Price/Ltr"
+        android:layout_toEndOf="@+id/txtOdometer"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/txtFuelAmount"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:text="# of Liters"
+        android:layout_toEndOf="@+id/txtFuelPrice"
+        android:gravity="center"/>
+</RelativeLayout>

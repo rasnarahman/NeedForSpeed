@@ -9,6 +9,14 @@
     android:orientation="vertical"
     tools:context="com.example.rasna.needforspeed.Vehicle">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
 
         <LinearLayout
@@ -20,7 +28,6 @@
             android:paddingRight="8dip"
             android:paddingTop="8dip">
 
-
             <TextView
                 android:id="@+id/tvVehicle"
                 android:layout_width="match_parent"
@@ -28,7 +35,7 @@
                 android:drawableLeft="@drawable/ic_car"
                 android:drawableRight="@drawable/ic_car"
                 android:layout_marginBottom="15dp"
-                android:text="Vehicle Detail"
+                android:text="@string/Vehicle_Detail"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textColorHighlight="@android:color/black"
@@ -38,7 +45,7 @@
                 android:id="@+id/tvMake"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Make"
+                android:text="@string/Make"
                 android:textColor="@android:color/black"
                 android:textColorHighlight="@android:color/black"
                 android:textSize="18sp" />
@@ -57,7 +64,7 @@
                 android:id="@+id/tvModel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Model"
+                android:text="@string/Model"
                 android:textColor="@android:color/black"
                 android:textColorHighlight="@android:color/black"
                 android:textSize="18sp" />
@@ -75,7 +82,7 @@
                 android:id="@+id/tvYear"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Year"
+                android:text="@string/Year"
                 android:textColor="@android:color/black"
                 android:textColorHighlight="@android:color/black"
                 android:textSize="18sp" />
@@ -92,7 +99,7 @@
                 android:id="@+id/tvVin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Vin"
+                android:text="@string/Vin"
                 android:textColor="@android:color/black"
                 android:textColorHighlight="@android:color/black"
                 android:textSize="18sp" />
@@ -110,7 +117,7 @@
                 android:id="@+id/tvTankSize"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Tank Size"
+                android:text="@string/Tank_Size"
                 android:textColor="@android:color/black"
                 android:textColorHighlight="@android:color/black"
                 android:textSize="18sp" />
@@ -135,7 +142,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:padding="7dp"
-                    android:text="Fuel Type"
+                    android:text="@string/Fuel_Type"
                     android:textColor="@android:color/black"
                     android:textColorHighlight="@android:color/black"
                     android:textSize="20sp" />
@@ -154,28 +161,35 @@
 
         </LinearLayout>
 
-        <LinearLayout
+    <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/holo_red_light"
             android:orientation="horizontal"
             android:padding="15dip">
 
             <Button
                 android:id="@+id/buttonOK"
-                android:layout_width="150dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="15dp"
                 android:background="@android:color/darker_gray"
-                android:text="OK" />
+                android:text="@string/OK" />
+
+           <!-- <Button
+                android:id="@+id/buttonCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@android:color/darker_gray"
+                android:text="Cancle" /> -->
 
             <Button
-                android:id="@+id/buttonCancel"
-                android:layout_width="150dp"
+                android:id="@+id/buttonHome"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="15dp"
                 android:background="@android:color/darker_gray"
-                android:text="Cancle" />
+                android:text="@string/Home" />
 
         </LinearLayout>
 

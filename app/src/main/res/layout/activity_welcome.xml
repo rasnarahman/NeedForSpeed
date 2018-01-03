@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_red_light"
+    android:orientation="vertical"
+    tools:context="com.example.rasna.needforspeed.WelcomeActivity">
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textColorHighlight="@android:color/black"
+        android:textSize="28dp"
+        android:layout_marginLeft="10dp"
+        android:textAlignment="center"
+        tools:text="@string/GIP" />
+
+
+    <Button
+        android:id="@+id/NanditaButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:background="@android:color/darker_gray"
+        android:text="House Thermostat"
+        android:textSize="18dp" />
+
+
+    <Button
+        android:id="@+id/NavdeepButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:background="@android:color/darker_gray"
+        android:text="Food Nutrition"
+        android:textSize="18dp" />
+
+
+
+    <Button
+        android:id="@+id/NisiniButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:background="@android:color/darker_gray"
+        android:text="Activity Tracking"
+        android:textSize="18dp" />
+
+
+    <Button
+        android:id="@+id/RasnaButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:background="@android:color/darker_gray"
+        android:text="@string/Automobile"
+        android:textSize="18dp" />
+
+</LinearLayout>
+
