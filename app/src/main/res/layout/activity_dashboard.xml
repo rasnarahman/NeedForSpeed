@@ -7,10 +7,6 @@
     android:background="@android:color/holo_red_light"
     android:orientation="vertical"
     tools:context="com.example.rasna.needforspeed.DashboardActivity">
-
-
-
-
                 <Button
                     android:id="@+id/RefuelButton"
                     android:layout_width="323dp"

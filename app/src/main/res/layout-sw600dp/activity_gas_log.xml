@@ -13,7 +13,6 @@
         android:orientation="horizontal"
         android:layout_alignParentTop="true"
         >
-
         <TextView
             android:id="@+id/txtDate"
             android:layout_width="100dp"
@@ -23,7 +22,7 @@
             android:gravity="center"
             android:textSize="15dp"
             android:textStyle="bold"
-            android:text="@string/PurchaseDate" />
+            android:text= "@string/PurchaseDate" />
         <TextView
             android:id="@+id/txtOdometer"
             android:layout_width="100dp"
@@ -57,12 +56,12 @@
 
     <ListView
         android:id="@+id/list_view"
-        android:layout_width="match_parent"
-        android:layout_height="360dp"
-        android:layout_alignParentEnd="true"
+        android:layout_width="400dp"
+        android:layout_height="700dp"
+        android:layout_alignParentStart="true"
         android:layout_marginTop="25dp"
-         />
 
+         />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -108,22 +107,35 @@
 
     </LinearLayout>
 
+
+
     <Button
         android:id="@+id/buttonAddFuel"
         android:layout_width="wrap_content"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:text="@string/Add_Fuel"
-        android:drawableLeft="@drawable/ic_gas_station"/>
-
+        android:text="@string/Add_Fuel" />
 
     <Button
         android:id="@+id/buttonDeleteVehicle"
         android:layout_width="wrap_content"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
+        android:layout_marginStart="28dp"
+        android:layout_toEndOf="@+id/buttonAddFuel"
         android:text="@string/Delete_Vehicle" />
+
+
+    <FrameLayout
+        android:id="@+id/entryType"
+        android:layout_width="400dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:gravity="left">
+
+    </FrameLayout>
+
 
 </RelativeLayout>
