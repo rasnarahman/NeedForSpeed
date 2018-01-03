@@ -9,13 +9,13 @@ import android.os.Bundle;
 import android.util.Log;
 import android.util.Xml;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
+
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -70,7 +70,6 @@ public class WeatherForecast extends Activity {
                 Log.i(TAG, "downloading image");
                 Bitmap bm = BitmapFactory.decodeStream(connection.getInputStream());
                 return bm;
-
             }
             else{
                 return null;
@@ -131,7 +130,6 @@ public class WeatherForecast extends Activity {
                         publishProgress(50);
                         max = parser.getAttributeValue(null, "max");
                         publishProgress(75);
-
                     }
                     if(parser.getName().equals("weather")){
                         iconName = parser.getAttributeValue(null, "icon");
@@ -176,7 +174,6 @@ public class WeatherForecast extends Activity {
             Log.i(TAG, "in onProgressUpdate");
             progressBar.setVisibility(View.VISIBLE);
             progressBar.setProgress(value[0]);
-
         }
 
         public void onPostExecute(String result){
@@ -187,9 +184,6 @@ public class WeatherForecast extends Activity {
             weatherImage.setImageBitmap(icon);
             progressBar.setVisibility(View.INVISIBLE);
         }
-
-
-
     }
 
 }

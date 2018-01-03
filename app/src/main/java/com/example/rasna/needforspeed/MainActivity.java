@@ -112,46 +112,25 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_two:
                 Log.i("Toolbar", "Option 2 selected");
 
-                // AlertDialog.Builder builder = new AlertDialog.Builder(this.getApplication());
-
                 AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(this, R.style.AppTheme));
 
                 builder.setTitle(R.string.pick_color);
-
-                // Add the buttons
-
                 builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
-
                     public void onClick(DialogInterface dialog, int id) {
-
-                        // User clicked OK button
-
                         finish();
-
                     }
-
                 });
 
                 builder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
-
                     public void onClick(DialogInterface dialog, int id) {
-
-                        // User cancelled the dialog
-
                     }
 
                 });
-
-                // Create the AlertDialog
-
                 AlertDialog dialog = builder.create();
-
                 dialog.show();
-
                 break;
 
         }
-
         return  true;
     }
 
