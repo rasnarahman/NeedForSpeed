@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/holo_red_light"
+    tools:context="com.example.rasna.needforspeed.ActivityTracking">
+
+    <TextView
+        android:id="@+id/welcomeMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/darker_gray"
+        android:text="@string/welcomeM"
+        android:textAlignment="center"
+        android:layout_marginBottom="5dp"
+        android:textAppearance="@android:style/TextAppearance"
+        android:textSize="18dp" />
+
+    <Button
+        android:id="@+id/swimming"
+        android:layout_width="323dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/Swimming"
+        android:textSize="18dp" />
+
+    <Button
+        android:id="@+id/running"
+        android:layout_width="323dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/Running"
+        android:textSize="18dp" />
+
+    <Button
+        android:id="@+id/biking"
+        android:layout_width="323dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/Biking"
+        android:textSize="18dp" />
+
+    <Button
+        android:id="@+id/walking"
+        android:layout_width="323dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/Walking"
+        android:textSize="18dp" />
+
+    <Button
+        android:id="@+id/skating"
+        android:layout_width="323dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/Skating"
+        android:textSize="18dp" />
+</LinearLayout>

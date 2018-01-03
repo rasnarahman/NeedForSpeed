@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/list_row"
+    android:padding="5sp"
+    >
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_day"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:paddingBottom="5sp"
+        android:textAlignment="textStart" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tv_day"
+        android:id="@+id/tv_time"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_comment"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:layout_toRightOf="@+id/tv_time"
+        android:textAlignment="textEnd" />
+
+</RelativeLayout>

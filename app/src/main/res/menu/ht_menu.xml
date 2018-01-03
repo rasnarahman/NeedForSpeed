@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/htAbout"
+        android:title="About"
+        app:showAsAction="always"
+        android:background="#FFFFBB33"
+        android:icon="@mipmap/icons8_happy_50" />
+
+    <item android:id="@+id/htHome"
+        android:title="@string/htHome"
+        app:showAsAction="always"
+        android:background="#FFFFBB33"
+        android:icon="@mipmap/icons8_lol_50"/>
+
+    <item android:id="@+id/htEng"
+        android:title="@string/htEn"
+        app:showAsAction="ifRoom" />
+
+    <item android:id="@+id/htFr"
+        android:title="@string/htFr"
+        app:showAsAction="ifRoom" />
+
+</menu>
