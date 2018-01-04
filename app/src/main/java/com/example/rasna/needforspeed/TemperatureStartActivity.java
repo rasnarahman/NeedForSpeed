@@ -1,11 +1,8 @@
 package com.example.rasna.needforspeed;
 
-import android.app.Activity;
 import android.app.Dialog;
-import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.preference.Preference;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -19,8 +16,6 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Locale;
 
 public class TemperatureStartActivity extends AppCompatActivity {
@@ -56,8 +51,6 @@ public class TemperatureStartActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        Intent intent;
-        // Handle item selection
         switch (item.getItemId()) {
             case R.id.htAbout:
                 showAboutInfo();

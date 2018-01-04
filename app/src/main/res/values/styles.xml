@@ -1,8 +1,6 @@
 <resources>
 
     <!-- Base application theme. -->
-    <!-- android:Theme.Material.Light.DarkActionBar -->
-    <!-- Theme.AppCompat.NoActionBar -->
     <style name="AppTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -11,7 +9,7 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
-
+    <style name="htAppTheme" parent="Theme.AppCompat.DayNight.DarkActionBar"/>
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>

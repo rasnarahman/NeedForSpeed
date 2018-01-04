@@ -9,19 +9,20 @@
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="@string/htHintDay"
         android:id="@+id/tilDay">
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName|textCapWords"
             android:id="@+id/etDay"
-            android:layout_marginTop="10dp"
-            android:hint="@string/htHintDay" />
+            android:layout_marginTop="10dp" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="@string/htHintHour"
         android:layout_below="@id/tilDay"
         android:id="@+id/tilHour">
         <EditText
@@ -30,13 +31,13 @@
             android:inputType="number"
             android:layout_marginTop="10dp"
             android:ems="10"
-            android:id="@+id/etHr"
-            android:hint="@string/htHintHour" />
+            android:id="@+id/etHr" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="@string/htHintMinute"
         android:layout_below="@id/tilHour"
         android:id="@+id/tilMin">
         <EditText
@@ -45,13 +46,13 @@
             android:inputType="number"
             android:layout_marginTop="10dp"
             android:ems="10"
-            android:id="@+id/etMin"
-            android:hint="@string/htHintMinute" />
+            android:id="@+id/etMin" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="@string/htHintTemp"
         android:layout_below="@id/tilMin"
         android:id="@+id/tilTemp">
         <EditText
@@ -60,8 +61,7 @@
             android:layout_marginTop="10dp"
             android:inputType="number"
             android:ems="10"
-            android:id="@+id/etTemp"
-            android:hint="@string/htHintTemp" />
+            android:id="@+id/etTemp" />
     </android.support.design.widget.TextInputLayout>
 
     <FrameLayout

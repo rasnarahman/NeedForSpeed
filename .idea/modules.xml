@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/NeedForSpeed2.iml" filepath="$PROJECT_DIR$/NeedForSpeed2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NeedForSpeed.iml" filepath="$PROJECT_DIR$/NeedForSpeed.iml" />
+      <module fileurl="file://C:\Users\nandita\AndroidStudioProjects\NeedForSpeed\NeedForSpeed2.iml" filepath="C:\Users\nandita\AndroidStudioProjects\NeedForSpeed\NeedForSpeed2.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
