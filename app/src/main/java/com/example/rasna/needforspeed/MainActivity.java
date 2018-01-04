@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.ContextThemeWrapper;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -17,6 +18,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -101,8 +103,33 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
         switch (id) {
             case R.id.action_about:
+                Log.i("Toolbar", "Option3 is selected");
+                LayoutInflater inflater = this.getLayoutInflater();
+                //inflating the layout that contains custom message
+                View view = inflater.inflate(R.layout.layout_to_signin,null);
+                final TextView customText = (TextView) view.findViewById(R.id.tvInfo);
+                android.support.v7.app.AlertDialog.Builder builder1 = new android.support.v7.app.AlertDialog.Builder(MainActivity.this);
+                builder1.setView(view).setMessage(R.string.dialog_message);
+                builder1.setView(view).setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        sendBackMsgToOne = customText.getText().toString();
+                    }
+                })
+                        .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                // User cancelled the dialog
+                                dialog.cancel();
+                            }
+                        });
+
+                // Create the AlertDialog object and return it
+                android.support.v7.app.AlertDialog dialog1 = builder1.create();
+                dialog1.show();
+                break;
+            case R.id.action_settings:
                 Toast.makeText(this.getApplicationContext(), "Version 1.0, by Rasna Rahman.",
                         Toast.LENGTH_LONG).show();
+            default:
                 break;
             case R.id.action_home:
                 Log.i("Toolbar", "Welcome to my first android app");
@@ -112,46 +139,26 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_two:
                 Log.i("Toolbar", "Option 2 selected");
 
-                // AlertDialog.Builder builder = new AlertDialog.Builder(this.getApplication());
-
                 AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(this, R.style.AppTheme));
 
                 builder.setTitle(R.string.pick_color);
-
-                // Add the buttons
-
                 builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
-
                     public void onClick(DialogInterface dialog, int id) {
-
-                        // User clicked OK button
-
                         finish();
-
                     }
-
                 });
 
                 builder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
-
                     public void onClick(DialogInterface dialog, int id) {
-
-                        // User cancelled the dialog
-
                     }
 
                 });
-
-                // Create the AlertDialog
-
                 AlertDialog dialog = builder.create();
-
                 dialog.show();
-
                 break;
 
-        }
 
+        }
         return  true;
     }
 

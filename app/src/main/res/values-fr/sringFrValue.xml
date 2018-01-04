@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="GIP" > Programmation deinterface graphique</string>
+    <string name="title_activity_test_toolbar">TestToolbar</string>
+    <string name="aboutBtnCloseTxt">Annuler</string>
+    <string name="car">
+        Auteur: Rasna Rahman \ nVersion: 1.0.0 \ n \ nInstructions. \ N \ nDepuis la page deaccueil, tapez sur
+    ajoutez votre véhicule. Tapez sur l'un de votre véhicule dans la liste déroulante pour ajouter le carburant de la voiture.
+    </string>
+    <string name="ok">Daccord</string>
+
+    <string name="pick_color">Veux-tu y retourner? </string>
+    <string name="dialog_message">Voulez-vous finir lactivité</string>
+    <string name="dialog_title">terminer le travail</string>
+    <string name="dialog_fire_missiles">Message de dialogue dalerte de bienvenue</string>
+
+    <string name="app_name">Voiture</string>
+    <string name="Select_Vehicles">Sélectionnez les véhicules</string>
+    <string name="Add_vehicle">Ajouter un véhicule </string>
+    <string name="weather_forecast" translatable="false">  Weather Forecast </string>
+    <string name="cur_temp" translatable="false">Current Temperature </string>
+    <string name="min_temp" translatable="false">Minimum Temperature </string>
+    <string name="max_temp" translatable="false">maximum Temperature </string>
+    <string name="weatherImage" translatable="false">A weather related image</string>
+    <string name="PurchaseDate">date dachat</string>
+    <string name="Odometer">Odomètre </string>
+    <string name="Price_Ltr">Prix ​​/ Ltr </string>
+    <string name="Liters">Liters </string>
+    <string name="Total_Fuel_Cost">Coût total du carburant ($)</string>
+
+    <string name="Add_Fuel">Ajouter du carburant</string>
+    <string name="Delete_Vehicle">Supprimer le véhicule</string>
+    <string name="select_date">yyyy-mm-dd hr:min:00</string>
+    <string name="Monthly_Fuel_cost">Coût mensuel</string>
+
+    <string name="Make">Faire</string>
+    <string name="Vehicle_Detail">Détail du véhicule</string>
+    <string name="Model">Modèle</string>
+    <string name="Year">An</string>
+    <string name="Vin">Vin</string>
+    <string name="Tank_Size">Taille du réservoir</string>
+    <string name="Fuel_Type">Type de carburant</string>
+    <string name="OK">Daccord</string>
+    <string name="Home">Accueil</string>
+
+    <string name="ok_date">Daccord</string>
+    <string name="Cancle_date">Annuler</string>
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+
+    <string-array name="fuel_type">
+        <item>Octen</item>
+        <item>Essence</item>
+        <item>Diesel</item>
+        <item>CNG</item>
+        <item>LPG</item>
+    </string-array>
+
+
+
+
+
+</resources>

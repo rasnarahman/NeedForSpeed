@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_red_light"
+    android:background="@android:color/darker_gray"
     android:orientation="vertical"
     tools:context="com.example.rasna.needforspeed.WelcomeActivity">
 
@@ -12,53 +12,66 @@
         android:id="@+id/tvEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/black"
-        android:textColorHighlight="@android:color/black"
-        android:textSize="28dp"
-        android:layout_marginLeft="10dp"
+        android:layout_alignParentTop="true"
+        android:textSize="20dp"
         android:textAlignment="center"
-        tools:text="@string/GIP" />
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="10dp"
+        android:text="@string/GIP"/>
 
 
     <Button
         android:id="@+id/NanditaButton"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="12dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tvEmail"
+        android:layout_marginTop="124dp"
         android:background="@android:color/darker_gray"
+        android:drawableTop="@drawable/ic_heatingroom"
+        android:layout_marginLeft="15dp"
         android:text="House Thermostat"
         android:textSize="18dp" />
 
 
     <Button
         android:id="@+id/NavdeepButton"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="12dp"
+        android:layout_alignBaseline="@+id/NanditaButton"
+        android:layout_alignBottom="@+id/NanditaButton"
+        android:layout_alignStart="@+id/RasnaButton"
         android:background="@android:color/darker_gray"
+        android:drawableTop="@drawable/ic_meal"
         android:text="Food Nutrition"
         android:textSize="18dp" />
 
 
-
     <Button
         android:id="@+id/NisiniButton"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="12dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/NanditaButton"
+        android:layout_marginBottom="67dp"
         android:background="@android:color/darker_gray"
+        android:drawableTop="@drawable/ic_exercise"
         android:text="Activity Tracking"
-        android:textSize="18dp" />
+        android:textSize="20dp" />
 
 
     <Button
         android:id="@+id/RasnaButton"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="12dp"
+        android:layout_alignBaseline="@+id/NisiniButton"
+        android:layout_alignBottom="@+id/NisiniButton"
+        android:layout_marginStart="25dp"
+        android:layout_toEndOf="@+id/NisiniButton"
         android:background="@android:color/darker_gray"
+        android:drawableTop="@drawable/ic_automobile"
         android:text="@string/Automobile"
-        android:textSize="18dp" />
+        android:textSize="20dp" />
 
-</LinearLayout>
+</RelativeLayout>
 

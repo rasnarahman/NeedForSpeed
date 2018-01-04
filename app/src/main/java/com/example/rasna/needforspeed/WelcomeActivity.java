@@ -20,8 +20,6 @@ public class WelcomeActivity extends Activity {
 
 
 
-
-
     public void onClickRasna(){
         RasnaButton = (Button)findViewById(R.id.RasnaButton);
         RasnaButton.setOnClickListener(new View.OnClickListener(){
