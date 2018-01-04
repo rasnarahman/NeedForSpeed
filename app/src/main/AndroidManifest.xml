@@ -14,10 +14,13 @@
         <activity android:name=".WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".TemperatureStartActivity"
+            android:parentActivityName=".WelcomeActivity"
+            android:theme="@style/htAppTheme"
+            android:label="@string/htAppName"/>
         <activity android:name=".MainActivity" />
         <activity android:name=".TimeActivity" />
         <activity android:name=".Vehicle" />
@@ -26,7 +29,6 @@
         <activity android:name=".automobile_row" />
         <activity android:name=".WeatherForecast" />
         <activity android:name=".Fuel_details" />
-        <activity android:name=".Fuel_fragment" />
         <activity android:name=".to_signin" />
     </application>
 

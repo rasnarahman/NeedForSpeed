@@ -15,9 +15,8 @@ public class WelcomeActivity extends Activity {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_welcome );
         onClickRasna();
+        onClickNandita();
     }
-
-
 
 
 
@@ -34,5 +33,16 @@ public class WelcomeActivity extends Activity {
     }
 
 
+    public void onClickNandita(){
+        RasnaButton = (Button)findViewById(R.id.NanditaButton);
+        RasnaButton.setOnClickListener(new View.OnClickListener(){
+                                           @Override
+                                           public void onClick(View v){
+                                               Intent intent = new Intent(WelcomeActivity.this, TemperatureStartActivity.class);
+                                               startActivity( intent );
+                                           }
+                                       }
+        );
+    }
 
 }
