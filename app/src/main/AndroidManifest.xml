@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.rasna.needforspeed">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,23 +11,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".StartActivity" />
-        <activity android:name=".SignUpActivity" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".DashboardActivity" />
-        <activity android:name=".TimeActivity" />
-        <activity android:name=".Vehicle">
-
-        </activity>
-        <activity android:name=".gas_record" />
-        <activity android:name=".gas_logList" />
-        <activity android:name=".ActivityTracking">
+        <activity android:name=".WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".TemperatureStartActivity"
+            android:parentActivityName=".WelcomeActivity"
+            android:theme="@style/htAppTheme"
+            android:label="@string/htAppName"/>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".TimeActivity" />
+        <activity android:name=".Vehicle" />
+        <activity android:name=".gas_record" />
+        <activity android:name=".gas_logList" />
+        <activity android:name=".automobile_row" />
+        <activity android:name=".WeatherForecast" />
+        <activity android:name=".Fuel_details" />
+        <activity android:name=".to_signin" />
     </application>
 
 </manifest>

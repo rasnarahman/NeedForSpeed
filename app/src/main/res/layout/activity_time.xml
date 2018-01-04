@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_red_light"
+    android:background="@android:color/darker_gray"
     android:orientation="vertical"
     tools:context="com.example.rasna.needforspeed.TimeActivity">
 
@@ -28,7 +28,7 @@
             android:layout_height="wrap_content" />
 
             <TimePicker
-                android:id="@+id/timePicker3"
+                android:id="@+id/timePicker"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -39,11 +39,11 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/OkBtn"
+                android:id="@+id/saveTime"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="35dp"
-                android:text="OK" />
+                android:text="@string/ok_date" />
 
 
             <Button
@@ -51,7 +51,7 @@
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="35dp"
-                android:text="Cancle" />
+                android:text="@string/Cancle_date" />
 
         </LinearLayout>
         </LinearLayout>

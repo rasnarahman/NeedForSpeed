@@ -5,86 +5,83 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/holo_red_light"
-
     tools:context="com.example.rasna.needforspeed.MainActivity">
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="30dp"
-        android:orientation="vertical"
-        android:padding="25dp">
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
-        <TextView
-            android:id="@+id/labelSpinner"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:background="@android:color/darker_gray"
-            android:drawableLeft="@drawable/ic_car"
-            android:text="Select Vehicles"
-            android:textAlignment="center"
-            android:textColor="@android:color/black"
-            android:textColorHighlight="@android:color/black"
-            android:textSize="24dp" />
-
-        <Spinner
-            android:id="@+id/spinnerVehicles"
-            android:layout_width="match_parent"
-            android:layout_height="84dp"
-            android:textSize="25sp" />
-
-        <!-- VEHICLE ADD/EDIT/DELETE BUTTONS -->
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="right"
-            android:orientation="horizontal">
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            android:padding="25dp">
 
-            <Button
-                android:id="@+id/buttonVehicleDelete"
-                android:layout_width="90dp"
-                android:layout_height="66dp"
-                android:tooltipText="Delete"
-                android:backgroundTint="@android:color/black"
-                android:drawableLeft="@drawable/ic_menu_delete" />
+            <TextView
+                android:id="@+id/labelSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@android:color/darker_gray"
+                android:drawableLeft="@drawable/ic_car"
+                android:text="@string/Select_Vehicles"
+                android:textColor="@android:color/black"
+                android:textColorHighlight="@android:color/black"
+                android:textSize="20dp" />
 
-            <Button
-                android:id="@+id/buttonVehicleEdit"
-                android:layout_width="90dp"
-                android:layout_height="66dp"
-                android:backgroundTint="?android:attr/colorPrimary"
-                android:tooltipText="Edit"
-                android:drawableLeft="@drawable/ic_edit" />
+            <Spinner
+                android:id="@+id/spinnerVehicles"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="25dp"
+                android:textSize="25dp"
+                android:background="@android:color/white" />
 
             <Button
                 android:id="@+id/buttonVehicleAdd"
-                android:layout_width="90dp"
-                android:layout_height="66dp"
-                android:tooltipText="Add Vehicles"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="25dp"
                 android:backgroundTint="@android:color/darker_gray"
-                android:drawableLeft="@drawable/ic_ncar" />
+                android:drawableLeft="@drawable/ic_ncar"
+                android:text="@string/Add_vehicle"
+                android:textSize="18dp"/>
+
+            <Button
+                android:id="@+id/weatherButton"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="25dp"
+                android:backgroundTint="@android:color/darker_gray"
+                android:text="Car Help"
+                android:textSize="18dp" />
 
         </LinearLayout>
 
 
+    <android.support.design.widget.FloatingActionButton
 
-    </LinearLayout>
-
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="220dp"
-        android:layout_height="60dp"
+        android:id="@+id/floatingAction"
+        android:layout_width="90dp"
+        android:layout_height="80dp"
+        android:layout_alignEnd="@+id/linearLayout2"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="19dp"
-        android:backgroundTint="@android:color/darker_gray"
-        android:text="Submit"
-        android:textSize="18dp" />
-
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="37dp"
+        app:backgroundTint="@android:color/background_light"
+        app:layout_anchorGravity="bottom|right|end"
+        app:pressedTranslationZ="12dp"
+        app:srcCompat="@drawable/ic_car" />
 
 </RelativeLayout>

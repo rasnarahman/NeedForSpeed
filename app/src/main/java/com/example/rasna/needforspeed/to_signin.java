@@ -1,14 +1,13 @@
 package com.example.rasna.needforspeed;
 
-
 import android.app.Activity;
 import android.os.Bundle;
 
-public class DashboardActivity extends Activity {
+public class to_signin extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate( savedInstanceState );
-        setContentView( R.layout.activity_dashboard );
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.layout_to_signin);
     }
 }

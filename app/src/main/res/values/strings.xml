@@ -1,5 +1,57 @@
 <resources>
-    <string name="app_name">NeedForSpeed</string>
+    <string name="GIP"> Graphical Interface Programming</string>
+    <string name="Automobile">Automobile</string>
+
+    <string name="app_name">Automobile</string>
+    <string name="Select_Vehicles"> Select Vehicles </string>
+    <string name="Add_vehicle">Add Vehicle </string>
+    <string name="weather_forecast" translatable="false">  Weather Forecast </string>
+    <string name="cur_temp" translatable="false">Current Temperature </string>
+    <string name="min_temp" translatable="false">Minimum Temperature </string>
+    <string name="max_temp" translatable="false">maximum Temperature </string>
+    <string name="weatherImage" translatable="false">A weather related image</string>
+    <string name="PurchaseDate">Purchase Date</string>
+    <string name="Odometer"> Odometer </string>
+    <string name="Price_Ltr">Price/Ltr </string>
+    <string name="Liters">Liters </string>
+    <string name="Total_Fuel_Cost">Total Fuel Cost($)</string>
+
+    <string name="Add_Fuel">Add Fuel </string>
+    <string name="Delete_Vehicle">Delete Vehicle </string>
+    <string name="select_date">yyyy-mm-dd hr:min:00</string>
+    <string name="Monthly_Fuel_cost">Monthly Cost</string>
+
+    <string name="Make">Make</string>
+    <string name="Vehicle_Detail">Vehicle Detail</string>
+    <string name="Model">Model</string>
+    <string name="Year">Year</string>
+    <string name="Vin">Vin</string>
+    <string name="Tank_Size">Tank_Size</string>
+    <string name="Fuel_Type">Fuel_Type</string>
+    <string name="OK">OK</string>
+    <string name="Home">Home</string>
+
+    <string name="ok_date">OK</string>
+    <string name="Cancle_date">Cancle</string>
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="pick_color">Do you want to go back? </string>
+    <string name="dialog_message">Want to finish the activity</string>
+    <string name="dialog_title">finish job</string>
+    <string name="dialog_fire_missiles">Welcome alert dialog message </string>
+    <string name="ok">ok</string>
+    <string name="cancel">cancel</string>
+    <string name="car">
+        Author: Rasna Rahman\nVersion: 1.0.0\n\nInstruction.\n\nFrom home view tap to
+       add your vehicle. Tap on any of your vehicle from the drop down list to add the car fuel.
+    </string>
+    <string name="aboutBtnCloseTxt">cancel</string>
+
 
     <string-array name="fuel_type">
         <item>Octen</item>
@@ -7,8 +59,32 @@
         <item>Diesel</item>
         <item>CNG</item>
         <item>LPG</item>
-
     </string-array>
+    <string name="title_activity_test_toolbar">TestToolbar</string>
+
+    <string name="htAppName">HouseThermostat</string>
+    <string name="htHome">Home</string>
+    <string name="htEn">En</string>
+    <string name="htFr">Fr</string>
+    <string name="htBtnBedroomTxt">Bedroom</string>
+    <string name="htBtnHallwayTxt">Hallway</string>
+    <string name="htBtnKitchenTxt">Kitchen</string>
+    <string name="htBtnBasementTxt">Basement</string>
+    <string name="htHintDay">Day</string>
+    <string name="htHintHour">Hour</string>
+    <string name="htHintMinute">Minute</string>
+    <string name="htHintTemp">Temperature</string>
+    <string name="htBtnAddTxt">Add</string>
+    <string name="htBtnEditTxt">Edit</string>
+    <string name="htBtnDeleteTxt">Delete</string>
+    <string name="htBtnCloseTxt">Close</string>
+    <string name="htAbout">About...</string>
+    <string name="htAboutInfo">
+        Author: Nandita Ghosh\nVersion: 1.0.0\n\nInstruction.\n\nFrom home view tap any one of the
+        four locations to view temperature settings of corresponding location. Tap on any one
+        of the settings to view or edit the setting.
+    </string>
+
 
     <string name="htBtnCloseTxt">Close Tab</string>
     <string name="htHome">Home</string>
