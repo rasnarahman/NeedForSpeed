@@ -57,4 +57,63 @@
     </string-array>
     <string name="title_activity_test_toolbar">TestToolbar</string>
 
+
+
+
+
+
+
+    <!--startregion-->
+    <string name="m_menu_automobile">Automobile</string>
+
+
+    <string name="m_activityTrackerButtonText">Launch Activity Tracker</string>
+    <string name="m_activityTrackerDescriptionText">Enter and track your workouts, including duration.</string>
+
+    <string name="m_nutritionTrackerButtonText">Launch Nutrition Tracker</string>
+    <string name="m_nutritionTrackerDescriptionText">Track your food intake and analyse its nutritional value.</string>
+
+
+
+
+    <string name="n_ValidateDialogTitle">Please try again.</string>
+
+    <string name="n_ValidateDialogMessage">You must enter a food name or description.</string>
+
+    <string name="n_OK">OK</string>
+
+    <string name="n_EditToastMessage">Food item has been edited.</string>
+
+    <string name="n_AboutTitle">Nutrition Tracker</string>
+
+    <string name="n_AboutMessage">Top menu: Return to home, rotate activities, About\nBottom menu: Add item, order items, stats\n\nVersion 1.0 by Neil Gagne</string>
+
+    <string name="n_FoodAddedToast">Food item has been added.</string>
+
+    <string name="n_FoodNameOrDesc">Food Name or Description:</string>
+
+    <string name="n_Calories">Calories:</string>
+
+    <string name="n_Carbs">Carbs:</string>
+
+    <string name="n_Fat">Fat:</string>
+
+    <string name="n_Comments">Comments:</string>
+
+    <string name="n_Edit">EDIT</string>
+
+    <string name="n_Close">CLOSE</string>
+
+    <string name="n_LogFood">Log Food</string>
+
+    <string name="n_Cancel">Cancel</string>
+
+    <string name="n_Delete">Delete</string>
+
+
+    <!--endregion-->
+
+
+
+
 </resources>

@@ -29,6 +29,12 @@
         <activity android:name=".Fuel_details" />
         <activity android:name=".Fuel_fragment" />
         <activity android:name=".to_signin" />
+        <activity android:name=".NavNutriTrackAct"
+
+
+
+            />
+
     </application>
 
 </manifest>
