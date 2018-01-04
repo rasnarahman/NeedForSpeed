@@ -25,12 +25,12 @@
         android:title="Choice 2"
         app:showAsAction="always" />
 
-    <item
-        android:id="@+id/action_three"
-        android:icon="@drawable/icons8settings"
-        android:orderInCategory="103"
-        android:title="Choice 3"
-        app:showAsAction="always" />
+    <!--<item-->
+        <!--android:id="@+id/action_three"-->
+        <!--android:icon="@drawable/icons8settings"-->
+        <!--android:orderInCategory="103"-->
+        <!--android:title="Choice 3"-->
+        <!--app:showAsAction="always" />-->
 
 
 

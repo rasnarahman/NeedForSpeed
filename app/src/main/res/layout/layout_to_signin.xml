@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.example.rasna.needforspeed.to_signin">
 
-
-    <ImageView
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:background="#a4c632"
-        android:contentDescription="@string/app_name"
-        android:scaleType="center"
-        android:src="@drawable/custom" />
+        android:layout_height="match_parent"
+        android:background="@android:color/holo_orange_light"
+        android:focusableInTouchMode="true" >
 
-    <EditText
-        android:id="@+id/customMsg"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginRight="4dp"
-        android:layout_marginTop="8dp"
-        android:background="#ffff00"
-        android:hint="message"
-        android:inputType="textMultiLine" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvInfo"
+            android:text="@string/car"
+            android:layout_margin="15dp" />
 
-</LinearLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/tvInfo">
+
+            <!--<Button-->
+                <!--android:id="@+id/btnClose"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="right|bottom"-->
+                <!--android:text="@string/aboutBtnCloseTxt"-->
+                <!--android:hapticFeedbackEnabled="true" />-->
+        </FrameLayout>
+
+    </RelativeLayout>

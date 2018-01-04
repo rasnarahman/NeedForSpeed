@@ -19,7 +19,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".DashboardActivity" />
         <activity android:name=".TimeActivity" />
         <activity android:name=".Vehicle" />
         <activity android:name=".gas_record" />

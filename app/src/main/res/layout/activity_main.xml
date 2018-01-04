@@ -64,7 +64,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="25dp"
                 android:backgroundTint="@android:color/darker_gray"
-                android:text="Weather Forcast"
+                android:text="Car Help"
                 android:textSize="18dp" />
 
         </LinearLayout>
