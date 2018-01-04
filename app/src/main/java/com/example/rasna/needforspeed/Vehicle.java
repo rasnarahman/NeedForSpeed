@@ -1,10 +1,13 @@
 package com.example.rasna.needforspeed;
 
 import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.ContextThemeWrapper;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -23,7 +26,7 @@ public class Vehicle extends AppCompatActivity {
     Spinner spFuelType;
     DatabaseHelper databaseHelper;
     Toolbar mToolBar;
-
+    String sendBackMsgToOne = "Welcome to my first android app";
     String Vin;
     String Make;
     String Model;
@@ -81,8 +84,29 @@ public class Vehicle extends AppCompatActivity {
                         Toast.LENGTH_LONG).show();
                 break;
             case R.id.action_home:
-                Intent intent = new Intent(Vehicle.this, MainActivity.class);
-                startActivity( intent );
+                Toast.makeText(this.getApplicationContext(), "Please add a new vehicle",
+                        Toast.LENGTH_LONG).show();
+                break;
+
+            case R.id.action_two:
+                Log.i("Toolbar", "Option 2 selected");
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(this, R.style.AppTheme));
+
+                builder.setTitle(R.string.pick_color);
+                builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        finish();
+                    }
+                });
+
+                builder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                    }
+
+                });
+                AlertDialog dialog = builder.create();
+                dialog.show();
                 break;
         }
 

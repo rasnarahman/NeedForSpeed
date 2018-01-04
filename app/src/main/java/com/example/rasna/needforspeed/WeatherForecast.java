@@ -124,5 +124,4 @@ public class WeatherForecast extends Activity {
     }
 
 
-
 }
