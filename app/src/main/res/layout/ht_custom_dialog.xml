@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/tvInfo"
-        android:text="@string/htAboutInfo"
+        android:text="@string/nAboutInfo"
         android:layout_margin="15dp" />
 
     <FrameLayout
@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right|bottom"
-            android:text="@string/htBtnCloseTxt"
+            android:text="@string/nBtnCloseTxt"
             android:hapticFeedbackEnabled="true" />
     </FrameLayout>
 

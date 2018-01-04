@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
+
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <item android:id="@+id/htAbout"
-        android:title="@string/htAbout"
+        android:title="@string/nAbout"
         app:showAsAction="always"
-        android:icon="@mipmap/ic_ht_info_white" />
+        android:background="#FFFFBB33"
+        android:icon="@mipmap/icons8_happy_50" />
+
     <item android:id="@+id/nHome"
-        android:title="@string/Home"
+        android:title="@string/htHome"
         app:showAsAction="always"
-        android:icon="@mipmap/ic_ht_home_white"/>
+        android:background="#FFFFBB33"
+        android:icon="@mipmap/icons8_lol_50"/>
+
     <item android:id="@+id/htEng"
-        android:title="@string/nEn"
+        android:title="@string/htEn"
         app:showAsAction="ifRoom" />
-    <item android:id="@+id/nFr"
+
+    <item android:id="@+id/htFr"
         android:title="@string/htFr"
         app:showAsAction="ifRoom" />
+
 </menu>

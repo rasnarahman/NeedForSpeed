@@ -55,13 +55,13 @@ public class TemperatureStartActivity extends AppCompatActivity {
             case R.id.htAbout:
                 showAboutInfo();
                 return true;
-            case R.id.htHome:
+            case R.id.nHome:
                 setMainView();
                 return true;
             case R.id.htEng:
                 loadLanguage("en");
                 return true;
-            case R.id.htFr:
+            case R.id.nFr:
                 loadLanguage("fr");
                 return true;
             default:

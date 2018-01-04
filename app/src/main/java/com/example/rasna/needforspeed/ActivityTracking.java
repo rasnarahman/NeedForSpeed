@@ -48,7 +48,7 @@ public class ActivityTracking extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.ht_menu, menu);
+        inflater.inflate(R.menu.at_menu, menu);
         return true;
 
     }
@@ -62,13 +62,13 @@ public class ActivityTracking extends AppCompatActivity {
             case R.id.htAbout:
                 showAboutInfo();
                 return true;
-            case R.id.htHome:
+            case R.id.nHome:
                 setMainView();
                 return true;
             case R.id.htEng:
                 loadLanguage("en");
                 return true;
-            case R.id.htFr:
+            case R.id.nFr:
                 loadLanguage("fr");
                 return true;
 
@@ -141,7 +141,7 @@ public class ActivityTracking extends AppCompatActivity {
         final TextView progress = findViewById(R.id.progress);
         ActivityTracking2 getInfoTask = new ActivityTracking2(this, activityListView, progressBar, progress);
         getInfoTask.execute(activity.toString());
-        //showSnackbar();
+        showSnackbar();
     }
     private void showSnackbar() {
         String msg = "SETTING(S) FOR " + getActivityName();

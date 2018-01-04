@@ -16,6 +16,7 @@ public class WelcomeActivity extends Activity {
         setContentView( R.layout.activity_welcome );
         onClickRasna();
         onClickNandita();
+        onClickNisini();
     }
 
 
@@ -39,6 +40,17 @@ public class WelcomeActivity extends Activity {
                                            @Override
                                            public void onClick(View v){
                                                Intent intent = new Intent(WelcomeActivity.this, TemperatureStartActivity.class);
+                                               startActivity( intent );
+                                           }
+                                       }
+        );
+    }
+    public void onClickNisini(){
+        RasnaButton = (Button)findViewById(R.id.NisiniButton);
+        RasnaButton.setOnClickListener(new View.OnClickListener(){
+                                           @Override
+                                           public void onClick(View v){
+                                               Intent intent = new Intent(WelcomeActivity.this, ActivityTracking.class);
                                                startActivity( intent );
                                            }
                                        }

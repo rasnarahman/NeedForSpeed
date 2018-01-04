@@ -63,21 +63,21 @@
     <string name="title_activity_test_toolbar">TestToolbar</string>
 
     <string name="htAppName">HouseThermostat</string>
-    <string name="htHome">Home</string>
-    <string name="htEn">En</string>
-    <string name="htFr">Fr</string>
+    <string name="nHome">Home</string>
+    <string name="nEn">En</string>
+    <string name="nFr">Fr</string>
     <string name="htBtnBedroomTxt">Bedroom</string>
     <string name="htBtnHallwayTxt">Hallway</string>
     <string name="htBtnKitchenTxt">Kitchen</string>
     <string name="htBtnBasementTxt">Basement</string>
-    <string name="htHintDay">Day</string>
+    <string name="nHintDay">Day</string>
     <string name="htHintHour">Hour</string>
     <string name="htHintMinute">Minute</string>
     <string name="htHintTemp">Temperature</string>
     <string name="htBtnAddTxt">Add</string>
     <string name="htBtnEditTxt">Edit</string>
     <string name="htBtnDeleteTxt">Delete</string>
-    <string name="htBtnCloseTxt">Close</string>
+    <string name="nBtnCloseTxt">Close</string>
     <string name="htAbout">About...</string>
     <string name="htAboutInfo">
         Author: Nandita Ghosh\nVersion: 1.0.0\n\nInstruction.\n\nFrom home view tap any one of the
@@ -85,7 +85,8 @@
         of the settings to view or edit the setting.
     </string>
 
-
+    <string name="nAppName">AvtivityTracking</string>
+    <string name="nAbout">About</string>
     <string name="htBtnCloseTxt">Close Tab</string>
     <string name="htHome">Home</string>
     <string name="htEn">En</string>
@@ -103,7 +104,7 @@
     <string name="Add">Add</string>
     <string name="Edit">Edit</string>
     <string name="Delete">Delete</string>
-    <string name="htAboutInfo">
+    <string name="nAboutInfo">
         Author: Nisini Dias\nVersion: 1.0.0\n\nInstruction.\n\nWhen in the main page, choose an activity you have done during the day. Tap on the any one to add a new one, edit the current or delete the current.
         Click on the second smily face to go back to choose another activity.
     </string>
