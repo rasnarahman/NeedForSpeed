@@ -65,7 +65,7 @@
 
     <!--startregion-->
     <string name="m_menu_automobile">Automobile</string>
-
+              <string name="m_menu_food">FoodNutrition</string>
 
     <string name="m_activityTrackerButtonText">Launch Activity Tracker</string>
     <string name="m_activityTrackerDescriptionText">Enter and track your workouts, including duration.</string>
