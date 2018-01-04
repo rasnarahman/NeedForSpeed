@@ -2,7 +2,7 @@
     <string name="GIP"> Graphical Interface Programming</string>
     <string name="Automobile">Automobile</string>
 
-    <string name="app_name">Automobile</string>
+    <string name="app_name">NutritionTracking</string>
     <string name="Select_Vehicles"> Select Vehicles </string>
     <string name="Add_vehicle">Add Vehicle </string>
     <string name="weather_forecast" translatable="false">  Weather Forecast </string>
@@ -64,7 +64,7 @@
 
 
     <!--startregion-->
-    <string name="m_menu_automobile">Automobile</string>
+    <string name="m_menu_automobile">FoodNutrition</string>
               <string name="m_menu_food">FoodNutrition</string>
 
     <string name="m_activityTrackerButtonText">Launch Activity Tracker</string>
@@ -86,7 +86,7 @@
 
     <string name="n_AboutTitle">Nutrition Tracker</string>
 
-    <string name="n_AboutMessage">Top menu: Return to home, rotate activities, About\nBottom menu: Add item, order items, stats\n\nVersion 1.0 by Neil Gagne</string>
+    <string name="n_AboutMessage">Top menu: Return to home, rotate activities, About\nBottom menu: Add item, order items, stats\n\nVersion 1.0 by Navdeep</string>
 
     <string name="n_FoodAddedToast">Food item has been added.</string>
 
@@ -94,7 +94,7 @@
 
     <string name="n_Calories">Calories:</string>
 
-    <string name="n_Carbs">Carbs:</string>
+    <string name="n_Carbs">Carbohydrates:</string>
 
     <string name="n_Fat">Fat:</string>
 

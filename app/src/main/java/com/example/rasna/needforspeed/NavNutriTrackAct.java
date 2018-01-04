@@ -37,7 +37,7 @@ public class NavNutriTrackAct extends AppCompatActivity {
 
     protected final static String ACTIVITY_NAME = "NutritionTracker";
     ListView nutritionListView;
-    NavDatabaseHelper globalDatabaseHelper;
+    NavDatabaseHelper FoodDatabaseHelper;
     SQLiteDatabase db;
     FoodAdapter listViewAdapter;
     ArrayList<String> foodArrayList = new ArrayList<>();
@@ -48,19 +48,24 @@ public class NavNutriTrackAct extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.navdeep_act_nutri);
         nutritionListView = findViewById(R.id.nutrition_listview);
-        globalDatabaseHelper = new NavDatabaseHelper(this);
-        db = globalDatabaseHelper.getWritableDatabase();
+        FoodDatabaseHelper = new NavDatabaseHelper(this);
+        db = FoodDatabaseHelper.getWritableDatabase();
         listViewAdapter = new FoodAdapter(this);
         nutritionListView.setAdapter(listViewAdapter);
 
         AddItemQuery populateList = new AddItemQuery();
         populateList.execute();
 
+
+        //Intent intent = new Intent(NavNutriTrackAct.this, WelcomeActivity.class);
+        //startActivity( intent );
+
+
+
+
         Toolbar myToolbar = findViewById(R.id.appToolbar);
         setSupportActionBar(myToolbar);
 
-
-        // FRAGMENT PREAMBLE -----------------------------------------------------------------------
 
         boolean frameLayoutExists = false;
 
@@ -73,8 +78,6 @@ public class NavNutriTrackAct extends AppCompatActivity {
 
         final boolean frameLayoutExistsFinal = frameLayoutExists;
 
-
-        // LISTVIEW ONCLICK ------------------------------------------------------------------------
 
         nutritionListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -102,9 +105,9 @@ public class NavNutriTrackAct extends AppCompatActivity {
                     bundle.putString("calories", "");
                 }
                 if (!cursor.getString(3).isEmpty()) {
-                    bundle.putString("carbs", cursor.getString(3));
+                    bundle.putString("carbohydrates", cursor.getString(3));
                 } else {
-                    bundle.putString("carbs", "");
+                    bundle.putString("carbohydrates", "");
                 }
                 if (!cursor.getString(4).isEmpty()) {
                     bundle.putString("fat", cursor.getString(4));
@@ -113,12 +116,7 @@ public class NavNutriTrackAct extends AppCompatActivity {
                 }
 
                 bundle.putString("comment", ""); // DELETE ME - SEE BELOW
-                /*
-                if (!cursor.getString(5).isEmpty()) {
-                    bundle.putString("comment", cursor.getString(5));
-                } else {
-                    bundle.putString("comment", cursor.getString(5));
-                }*/
+
 
                 if (!frameLayoutExistsFinal) {
                     NavdeepNutritionFragment fragment = new NavdeepNutritionFragment();
@@ -198,20 +196,20 @@ public class NavNutriTrackAct extends AppCompatActivity {
                     EditText caloriesfield = logView.findViewById(R.id.nutrition_calories_field);
                     EditText carbsfield = logView.findViewById(R.id.nutrition_carbs_field);
                     EditText fatfield = logView.findViewById(R.id.nutrition_fat_field);
-                    //EditText commentfield = logView.findViewById(R.id.nutrition_comment_field);
+                    EditText commentfield = logView.findViewById(R.id.nutrition_comment_field);
 
                     String itemName = namefield.getText().toString();
                     String itemCalories = caloriesfield.getText().toString();
                     String itemCarbs = carbsfield.getText().toString();
                     String itemFat = fatfield.getText().toString();
-                    //String itemComment = commentfield.getText().toString();
+                    String itemComment = commentfield.getText().toString();
 
                     ContentValues values = new ContentValues();
                     values.put( NavDatabaseHelper.FOOD_ITEM_COL_NAME, itemName);
                     values.put( NavDatabaseHelper.CALORIES_COL_NAME, itemCalories);
                     values.put( NavDatabaseHelper.CARB_COL_NAME, itemCarbs);
                     values.put( NavDatabaseHelper.FAT_COL_NAME, itemFat);
-                    //values.put(m_GlobalDatabaseHelper.COMMENTS_COL_NAME, itemComment);
+                    values.put(NavDatabaseHelper.COMMENTS_COL_NAME, itemComment);
 
                     db.insert( NavDatabaseHelper.NUTRITION_TABLE_NAME, null, values);
 
@@ -306,7 +304,6 @@ public class NavNutriTrackAct extends AppCompatActivity {
 
                     db.update(NavDatabaseHelper.NUTRITION_TABLE_NAME, values, strFilter, null);
 
-                    // UPDATE THE LISTVIEW BY REFRESHING ACTIVITY
 
                     Intent intent = getIntent();
                     finish();
@@ -332,11 +329,10 @@ public class NavNutriTrackAct extends AppCompatActivity {
     public void deleteItem(int id) {
         final int itemID = id;
         db.execSQL("DELETE FROM " + NavDatabaseHelper.NUTRITION_TABLE_NAME + " WHERE " + NavDatabaseHelper.FOOD_ID + " = " + id + ";");
-        updateNutrition();
+        //updateNutrition();
     }
 
 
-    // DELETE ITEM ---------------------------------------------------------------------------------
 
     public void showValidationDialog() {
         final AlertDialog validateDialog = new AlertDialog.Builder(NavNutriTrackAct.this).create();
@@ -351,8 +347,6 @@ public class NavNutriTrackAct extends AppCompatActivity {
         validateDialog.show();
     }
 
-
-    // ASYNC TASK ----------------------------------------------------------------------------------
 
     protected class FoodAdapter extends ArrayAdapter<String> {
         public FoodAdapter(Context c) {

@@ -10,6 +10,7 @@ public class WelcomeActivity extends Activity {
 
     Button RasnaButton;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
@@ -30,6 +31,11 @@ public class WelcomeActivity extends Activity {
                                          }
         );
     }
+
+
+
+
+
 
 
 

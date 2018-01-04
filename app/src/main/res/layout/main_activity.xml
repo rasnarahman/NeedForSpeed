@@ -25,13 +25,6 @@
             android:layout_marginTop="80dp"
             android:padding="10dp"/>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:layout_marginTop="20dp"
-            />
-
 
 
         <RelativeLayout
@@ -58,22 +51,10 @@
                 android:text="@string/m_nutritionTrackerDescriptionText" />
         </RelativeLayout>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:padding="10dp">
 
 
-        </RelativeLayout>
 
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:padding="10dp">
-        </RelativeLayout>
 
     </LinearLayout>
 

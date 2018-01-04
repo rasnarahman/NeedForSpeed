@@ -36,10 +36,11 @@ public class NavdeepMain extends AppCompatActivity {
             }
         });
 
+
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu){
+    public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.m_menu, menu);
         return true;
     }
@@ -48,8 +49,7 @@ public class NavdeepMain extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem menuItem) {
 
-        switch(menuItem.getItemId()){
-
+        switch (menuItem.getItemId()) {
 
 
             case R.id.menu_food:
@@ -57,21 +57,7 @@ public class NavdeepMain extends AppCompatActivity {
                 break;
 
 
-
-
         }
         return true;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-

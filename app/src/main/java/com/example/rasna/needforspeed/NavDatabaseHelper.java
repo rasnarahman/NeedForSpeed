@@ -19,7 +19,7 @@ public class NavDatabaseHelper extends SQLiteOpenHelper {
     static final String CARB_COL_NAME = "CARBOHYDRATE";
     static final String FAT_COL_NAME = "FAT";
     static final String COMMENTS_COL_NAME = "COMMENTS";
-    static final String FOOD_DATE_COL_NAME = "DATE";
+   // static final String FOOD_DATE_COL_NAME = "DATE";
 
     public static final String CREATE_NUTRITION_TABLE_SQL
             = "CREATE TABLE " + NUTRITION_TABLE_NAME + " ( "
@@ -29,7 +29,7 @@ public class NavDatabaseHelper extends SQLiteOpenHelper {
             + CARB_COL_NAME + " INTEGER, "
             + FAT_COL_NAME + " INTEGER "
             + COMMENTS_COL_NAME + " TEXT "
-            + FOOD_DATE_COL_NAME + " DATETIME DEFAULT CURRENT_TIMESTAMP "
+           // + FOOD_DATE_COL_NAME + " DATETIME DEFAULT CURRENT_TIMESTAMP "
 
             + " );";
 
